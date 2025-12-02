@@ -1,0 +1,73 @@
+:root {
+  --font-family: "Pretendard JP", "Apple SD Gothic Neo", sans-serif;
+
+  /* Primary */
+  --primary-notmal: #0790FF;
+  --primary-strong: #477EFF;
+
+  /* label */
+  --label-normal: #171918;
+  --label-neutral: #565656;
+  --label-alternative: #B4B4B4;
+  --label-disable: #E0E0E0;
+  --label-white: #FFFFFF;
+
+  /* Background */
+  --background-normal: #fafafa;
+  --background-white: #FFFFFF;
+
+  /* Line */
+  --line-normal: #D7D7D7;
+  --line-alternative: #E0E0E0;
+
+  /* Fill */
+  --fill-normal: rgba(215, 215, 215, 0.3);
+  --fill-strong: rgba(188, 188, 188, 0.6);
+
+  /* Shadow */
+  --shadow-normal: box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--label-normal);
+  background-color: var(--background-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 160px 0;
+}
+
+.inner {
+    max-width: 944px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.page_title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary-notmal);
+}
+
+.list {
+    display: flex;
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  :root {}
+
+  .inner {
+    max-width: 80%;
+    min-width: calc(100% - 32px);
+}
+}
