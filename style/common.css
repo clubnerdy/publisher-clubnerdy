@@ -50,6 +50,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 80px;
+    /* ✅ TODO: 배경색 삭제 */
+    background-color: var(--fill-strong);
 }
 
 .page_title {
