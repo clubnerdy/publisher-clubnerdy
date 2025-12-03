@@ -306,3 +306,50 @@
 .project_toggle.on li {
   height: auto;
 }
+
+/* .section05 */
+
+.page_description {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-normal);
+}
+
+.section05 .page_title {
+  color: var(--label-normal);
+}
+
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.project_card {
+  border: 1px solid var(--line-normal);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.card_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_top figure {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  box-shadow: var(--shadow-normal);
+  overflow: hidden;
+}
