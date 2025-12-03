@@ -180,3 +180,129 @@
 .skill_list .item.on {
   opacity: 1;
 }
+
+/* .section04 */
+
+.title_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.career_total {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--label-alternative);
+}
+
+.company_container {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.career_container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.company_logo {
+  width: 80px;
+  aspect-ratio: 1 / 1;
+}
+
+.career_col {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.company_meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.company_name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.company_summary {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--label-alternative);
+}
+
+.career_projects {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.career_item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project_header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project_title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project_period {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--label-alternative);
+}
+
+.project_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project_toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 12px;
+}
+
+.toggle_btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-normal);
+}
+
+.toggle_btn.on img {
+  transform: rotateZ(90deg);
+}
+
+.project_toggle li {
+  /* ✅ TODO : 클릭이벤트 할 때 주석풀기 */
+  /* height: 0; */
+  /* overflow: hidden; */
+  list-style: inside;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--label-neutral);
+}
+
+.project_toggle.on li {
+  height: auto;
+}
