@@ -326,6 +326,7 @@
 }
 
 .project_card {
+  min-height: 380px;
   border: 1px solid var(--line-normal);
   border-radius: 16px;
   overflow: hidden;
@@ -344,12 +345,57 @@
 .card_top {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
-.card_top figure {
+.project_card figure {
   width: 50px;
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   box-shadow: var(--shadow-normal);
   overflow: hidden;
+  background-color: var(--fill-white);
+}
+
+.service {
+  padding: 3px 5px;
+  border-radius: 3px;
+  background-color: var(--fill-strong);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--label-white);
+}
+
+.service.active {
+  background-color: var(--primary-normal);
+}
+
+.card_middle {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card_title {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.card_description {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--label-alternative);
+  line-height: 1.5;
+}
+
+.card_middle a {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-normal);
+  text-decoration: underline;
+}
+
+.logo_list {
+  display: flex;
+  gap: 8px;
 }
