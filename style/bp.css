@@ -1,0 +1,116 @@
+/* 반응형 */
+@media (max-width: 640px) {
+  section {
+    background-color: #efefef;
+  }
+
+  /* .section01 */
+
+  .main_icon {
+    width: 48px;
+  }
+
+  .main_title {
+    font-size: 32px;
+  }
+
+  .main_description {
+    font-size: 14px;
+  }
+
+  .download_btn img {
+    width: 14px;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* .section02 */
+
+  .ability_list {
+    flex-direction: column;
+    gap: 52px;
+    max-width: 360px;
+  }
+
+  .item a {
+    gap: 18px;
+  }
+
+  .item h3 {
+    text-align: center;
+  }
+
+  .item p {
+    text-align: center;
+  }
+
+  /* .section03 */
+
+  .nav_item {
+    font-size: 12px;
+  }
+
+  .skill_list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .skill_list .item {
+    border-radius: 12px;
+  }
+
+  /* .section04 */
+
+  .company_container {
+    /* width: 100%; */
+  }
+
+  .career_container {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .company_logo {
+    width: 32px;
+  }
+
+  .company_summary {
+    gap: 8px;
+  }
+
+  /* .section05 */
+
+  .project_container {
+    grid-template-columns: repeat(2, 2fr);
+    gap: 8px;
+  }
+
+  .project_card {
+    min-height: 420px;
+  }
+
+  .card_title {
+    font-size: 16px;
+  }
+
+  /* .section06 */
+
+  .blog_container {
+    grid-template-columns: repeat(2, 2fr);
+    gap: 8px;
+  }
+
+  .blog_card:nth-child(5),
+  .blog_card:nth-child(6) {
+    display: none;
+  }
+
+  .more_btn {
+    font-size: 14px;
+  }
+
+  /* section08 footer */
+
+  .footer .page_title {
+    font-size: 18px;
+  }
+}
