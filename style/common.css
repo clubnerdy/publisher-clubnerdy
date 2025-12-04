@@ -2,30 +2,31 @@
   --font-family: "Pretendard JP", "Apple SD Gothic Neo", sans-serif;
 
   /* Primary */
-  --primary-notmal: #0790FF;
-  --primary-strong: #477EFF;
+  --primary-normal: #0790ff;
+  --primary-strong: #477eff;
 
   /* label */
   --label-normal: #171918;
   --label-neutral: #565656;
-  --label-alternative: #B4B4B4;
-  --label-disable: #E0E0E0;
-  --label-white: #FFFFFF;
+  --label-alternative: #b4b4b4;
+  --label-disable: #e0e0e0;
+  --label-white: #ffffff;
 
   /* Background */
   --background-normal: #fafafa;
-  --background-white: #FFFFFF;
+  --background-white: #ffffff;
 
   /* Line */
-  --line-normal: #D7D7D7;
-  --line-alternative: #E0E0E0;
+  --line-normal: #d7d7d7;
+  --line-alternative: #e0e0e0;
 
   /* Fill */
-  --fill-normal: rgba(215, 215, 215, 0.3);
-  --fill-strong: rgba(188, 188, 188, 0.6);
+  --fill-normal: #d7d7d74d;
+  --fill-strong: #bcbcbc99;
+  --fill-white: #ffffff;
 
   /* Shadow */
-  --shadow-normal: box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-normal: 0px 4px 12px #5353531a;
 }
 
 body {
@@ -38,36 +39,39 @@ body {
 }
 
 .page_section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 160px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 160px 0;
 }
 
 .inner {
-    max-width: 944px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
+  max-width: 944px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  /* ✅ TODO: 배경색 삭제 */
+  /* background-color: var(--fill-strong); */
 }
 
 .page_title {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--primary-notmal);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--primary-normal);
 }
 
 .list {
-    display: flex;
+  display: flex;
 }
 
 /* 반응형 */
 @media (max-width: 640px) {
-  :root {}
+  :root {
+  }
 
   .inner {
     max-width: 80%;
     min-width: calc(100% - 32px);
-}
+  }
 }
