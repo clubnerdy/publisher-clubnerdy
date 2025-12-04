@@ -543,3 +543,45 @@
   height: 1px;
   background-color: var(--line-normal);
 }
+
+/* footer .section08 */
+
+footer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+footer .page_title {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--label-normal);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 25px 30px;
+  background-color: var(--fill-normal);
+  border-radius: 16px;
+}
+
+.footer_container div,
+.footer_container a {
+  display: flex;
+  gap: 10px;
+}
+
+.footer_container h3 {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 48px;
+}
+
+.footer_container p {
+  font-size: 14px;
+  font-weight: 400;
+}
