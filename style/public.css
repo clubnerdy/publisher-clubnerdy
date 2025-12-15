@@ -649,7 +649,7 @@ footer .page_title {
 }
 
 /* modal */
-body.modal-open {
+/* body.modal-open {
   overflow: hidden;
 }
 
@@ -796,4 +796,4 @@ body.modal-open {
 .modal_content span {
   font-weight: 700;
   line-height: 1.6;
-}
+} */
