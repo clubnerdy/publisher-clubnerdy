@@ -15,6 +15,7 @@
   /* Background */
   --background-normal: #fafafa;
   --background-white: #ffffff;
+  --background-modal: rgba(0, 0, 0, 0.4);
 
   /* Line */
   --line-normal: #d7d7d7;
