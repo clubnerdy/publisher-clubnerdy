@@ -53,9 +53,22 @@
 .download_btn {
   border: 0;
   background-color: var(--fill-normal);
-  padding: 12px 34px;
   border-radius: 8px;
   margin: 0 auto;
+  transition: 0.3s;
+}
+
+.download_btn:hover {
+  background-color: var(--primary-normal);
+}
+
+.download_btn svg path {
+  stroke: var(--label-neutral);
+  transition: 0.3s;
+}
+
+.download_btn:hover svg path {
+  stroke: var(--label-white);
 }
 
 .download_btn a {
@@ -64,6 +77,12 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--label-neutral);
+  transition: 0.3s;
+  padding: 12px 34px;
+}
+
+.download_btn:hover a {
+  color: var(--label-white);
 }
 
 .main_nav {
@@ -85,9 +104,13 @@
 
 .main_nav li {
   font-size: 14px;
-  font-weight: 400;
-  color: var(--label-neutral);
+  font-weight: 500;
+  color: var(--label-alternative);
   cursor: pointer;
+}
+
+.main_nav li:hover {
+  color: var(--primary-normal);
 }
 
 /* .section02 */
