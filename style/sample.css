@@ -1,0 +1,41 @@
+/* 탭 스타일 */
+.tab-nav {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 50px;
+  padding: 4px;
+  display: inline-flex;
+  gap: 4px;
+}
+
+.tab {
+  padding: 8px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: #999;
+}
+
+.tab.active {
+  color: #0066ff;
+}
+
+.indicator {
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+  transition: 0.3s;
+  z-index: 0;
+}
+
+/* 아이템 스타일 */
+.item {
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.item.show {
+  opacity: 1;
+}
