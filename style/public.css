@@ -147,11 +147,14 @@
   border-radius: 78px;
   background-color: var(--fill-normal);
   box-shadow: var(--shadow-normal);
+  position: relative;
 }
 
 .skill_nav ul {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .nav_item {
@@ -161,11 +164,21 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .nav_item.on {
-  background-color: var(--fill-white);
   color: var(--primary-normal);
+}
+
+.nav_indicator {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: var(--background-white);
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
 }
 
 .skill_list {

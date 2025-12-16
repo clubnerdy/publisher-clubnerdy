@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="/style/public.css" />
     <link rel="stylesheet" href="/style/bp.css" />
-    <script src="/script/public.js" defer></script>
+    <script src="/script/main.js" defer></script>
     <script src="/script/modal.js" defer></script>
   </head>
   <body>
@@ -130,11 +130,12 @@
           <!-- 기술 네비게이션 -->
           <!-- ✅ TODO: 클릭 이벤트 추가, 네비게이션 클릭 시 활성화되는 흰 배경 움직이게 -->
           <ul>
-            <li class="nav_item on">All</li>
-            <li class="nav_item">Dev</li>
-            <li class="nav_item">Design</li>
-            <li class="nav_item">Collab</li>
+            <li class="nav_item all on">All</li>
+            <li class="nav_item dev">Dev</li>
+            <li class="nav_item design">Design</li>
+            <li class="nav_item collab">Collab</li>
           </ul>
+          <div class="nav_indicator"></div>
         </nav>
         <!-- .skill_nav end -->
         <ul class="skill_list list">
@@ -175,28 +176,28 @@
           <li class="item dev on">
             <img src="assets/images/skill_icon/spring.svg" alt="SpringBoot" />
           </li>
-          <li class="item design">
+          <li class="item design on">
             <img src="assets/images/skill_icon/figma.svg" alt="Figma" />
           </li>
-          <li class="item design">
+          <li class="item design on">
             <img src="assets/images/skill_icon/photoshop.svg" alt="Photoshop" />
           </li>
-          <li class="item design">
+          <li class="item design on">
             <img src="assets/images/skill_icon/ai.svg" alt="Illustrator" />
           </li>
-          <li class="item design">
+          <li class="item design on">
             <img src="assets/images/skill_icon/pr.svg" alt="Primere" />
           </li>
-          <li class="item collab">
+          <li class="item collab on">
             <img src="assets/images/skill_icon/git.svg" alt="Git" />
           </li>
-          <li class="item collab">
+          <li class="item collab on">
             <img src="assets/images/skill_icon/github.svg" alt="GitHub" />
           </li>
-          <li class="item collab">
+          <li class="item collab on">
             <img src="assets/images/skill_icon/slack.svg" alt="Slack" />
           </li>
-          <li class="item collab">
+          <li class="item collab on">
             <img src="assets/images/skill_icon/notion.svg" alt="Notion" />
           </li>
         </ul>
