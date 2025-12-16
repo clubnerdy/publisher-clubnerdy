@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/style/public.css" />
     <link rel="stylesheet" href="/style/bp.css" />
     <script src="/script/public.js" defer></script>
+    <script src="/script/modal.js" defer></script>
   </head>
   <body>
     <section class="section01 page_section">
@@ -526,7 +527,7 @@
           <h2 class="page_title">프로젝트 세부 사항을 확인해 보세요</h2>
         </div>
         <ul class="project_container container">
-          <li class="project_card card">
+          <li class="project_card card" onclick="openModal()">
             <div class="card_contents">
               <div class="card_top">
                 <figure>
@@ -1138,5 +1139,86 @@
       <!-- .inner end -->
     </footer>
     <!-- .section09 end -->
+
+    <!-- modal -->
+    <!-- <div class="modal" id="modal" onclick="closeModalOnBackground(event)">
+      <div class="modal_box">
+        <div class="modal_inner">
+          <div class="modal_top">
+            <figure>
+              <img src="assets/images/project_image/sosu.png" alt="소수의원" />
+            </figure>
+            <div class="close_btn" onclick="closeModal()">
+              <img src="assets/images/icon-close.png" alt="" />
+            </div>
+          </div>
+          <ul class="modal_content">
+            <li class="modal_project_name">
+              <h3>프로젝트명</h3>
+              <p>소수의원 홈페이지 리브랜딩</p>
+            </li>
+            <li>
+              <h3>작업기간</h3>
+              <p>2개월</p>
+            </li>
+            <li>
+              <h3>사용기술</h3>
+              <ul class="modal_skill">
+                <li class="skill_dev">HTML5</li>
+                <li class="skill_dev">CSS3</li>
+                <li class="skill_dev">TypeScript</li>
+                <li class="skill_dev">React</li>
+                <li class="skill_dev">Next.js</li>
+                <li class="skill_design">Figma</li>
+              </ul>
+            </li>
+            <li>
+              <h3>주요 개선 사항</h3>
+              <ul class="modal_templete">
+                <li>
+                  <h5 class="modal_sub_title">브랜드 아이덴티티 강화</h5>
+                  <p class="modal_description">
+                    병원의 분위기와 철학을 반영한 비주얼 시스템을 구축하여
+                    일관된 브랜드 경험을 제공했습니다.
+                  </p>
+                </li>
+                <li>
+                  <h5 class="modal_sub_title">시술 정보 콘텐츠 재구성</h5>
+                  <p class="modal_description">
+                    각 시술 페이지마다 적용 대상, 시술 과정, 차별화 포인트 등의
+                    정보를 체계적으로 구성했습니다. 이를 통해 고객이 시술에 대해
+                    충분히 이해하고 신뢰를 바탕으로 의사결정을 내릴 수 있도록
+                    했습니다.
+                  </p>
+                </li>
+                <li>
+                  <h5 class="modal_sub_title">반응형 디자인 구현</h5>
+                  <p class="modal_description">
+                    모바일, 태블릿, 데스크톱 등 모든 디바이스에서 최적화된
+                    사용자 경험을 제공했습니다.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>문제와 해결</h3>
+              <p>
+                이 프로젝트는 React, Next.js, TypeScript를 처음 다루는 상황에서
+                시작되었습니다. 특히 이미 구축된 기존 웹사이트에 새로운 디자인을
+                적용하는 과정에서
+                <span
+                  >기존 코드 구조 파악 및 컴포넌트 재사용성 고려, TypeScript
+                  타입 시스템 이해 및 적용</span
+                >에 대한 부분에 어려움이 있었습니다. 이러한 과제들을
+                <span
+                  >공식 문서 학습과 시행착오를 통해 해결하며, 개발 역량을 크게
+                  성장</span
+                >시킬 수 있었습니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
   </body>
 </html>
