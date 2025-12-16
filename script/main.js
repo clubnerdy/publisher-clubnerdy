@@ -1,52 +1,28 @@
-// 기술스택 네비게이션 조작작
-const navItem = document.querySelectorAll(".nav_item");
+// 스킬 탭 클릭 이벤트트
+const tabs = document.querySelectorAll(".nav_item");
 const indicator = document.querySelector(".nav_indicator");
+const items = document.querySelectorAll(".skill_list .item");
 
-function updateIndicator(item) {
-  const { offsetLeft, offsetWidth } = item;
-  indicator.style.left = `${offsetLeft}px`;
-  indicator.style.width = `${offsetWidth}px`;
-}
+console.log(tabs);
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    document.querySelector(".nav_item.on").classList.remove("on");
+    tab.classList.add("on");
 
-const onItem = document.querySelector(".nav_item.on");
-updateIndicator(onItem);
+    indicator.style.left = tab.offsetLeft + "px";
+    indicator.style.width = tab.offsetWidth + "px";
 
-// 클릭 이벤트
-navItem.forEach((item) => {
-  item.addEventListener("click", () => {
-    // 기존 active 제거
-    document.querySelector(".nav_item.on")?.classList.remove("on");
+    const filter = tab.dataset.filter;
 
-    // 새로운 active 추가
-    item.classList.add("on");
-
-    // indicator 이동
-    updateIndicator(item);
-  });
-});
-
-// 네비게이션탭 시 스킬 활성화/비활성화 이벤트
-const allTab = document.querySelector(".nav_item.all");
-const devTab = document.querySelector(".nav_item.dev");
-const designTab = document.querySelector(".nav_item.design");
-const collabTab = document.querySelector(".nav_item.collab");
-
-const devItems = document.querySelectorAll(".item.dev");
-const disignItems = document.querySelectorAll(".item.disign");
-const collabItems = document.querySelectorAll(".item.collab");
-
-function activeSkill(tab) {
-  const allItems = document.querySelectorAll(".skill_list .item");
-
-  allItems.forEach((item) => {
-    if (tab === "all") {
-      item.classList.add("on");
-    } else {
-      if (item.contains(tab)) {
+    items.forEach((item) => {
+      if (filter === "all" || item.dataset.category === filter) {
         item.classList.add("on");
       } else {
         item.classList.remove("on");
       }
-    }
+    });
   });
-}
+});
+
+// 초기화
+tabs[0].click();
