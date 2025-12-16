@@ -26,3 +26,47 @@ tabs.forEach((tab) => {
 
 // 초기화
 tabs[0].click();
+
+// 경력 자세히보기 토글 이벤트
+const projectToggles = document.querySelectorAll(".project_toggle");
+
+projectToggles.forEach((content) => {
+  if (content.classList.contains("on")) {
+    const fullHeight = content.scrollHeight;
+    content.style.height = fullHeight + "px";
+  }
+  content.addEventListener("transitionend", (e) => {
+    if (e.propertyName !== "height") return;
+    if (content.classList.contains("on")) {
+      content.style.height = "auto";
+    }
+  });
+});
+
+document.querySelectorAll(".toggle_btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    const isOpen = content.classList.contains("on");
+
+    if (isOpen) {
+      const fullHeight = content.scrollHeight;
+      content.style.height = fullHeight + "px";
+
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+      });
+
+      btn.classList.remove("on");
+      content.classList.remove("on");
+    } else {
+      const fullHeight = content.scrollHeight;
+      content.style.height = "0px";
+      content.classList.add("on");
+      btn.classList.add("on");
+
+      requestAnimationFrame(() => {
+        content.style.height = fullHeight + "px";
+      });
+    }
+  });
+});
