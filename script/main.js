@@ -1,9 +1,28 @@
+// 메인 네비게이션 클릭 이벤트
+const navItem = document.querySelectorAll(".main_nav li");
+
+navItem.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetSelector = tab.dataset.target;
+    if (!targetSelector) return;
+
+    const targetSection = document.querySelector(targetSelector);
+    if (!targetSection) return;
+
+    const top = targetSection.offsetTop;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  });
+});
+
 // 스킬 탭 클릭 이벤트트
 const tabs = document.querySelectorAll(".nav_item");
 const indicator = document.querySelector(".nav_indicator");
 const items = document.querySelectorAll(".skill_list .item");
 
-console.log(tabs);
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     document.querySelector(".nav_item.on").classList.remove("on");
