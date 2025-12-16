@@ -293,13 +293,6 @@
   gap: 12px;
 }
 
-.project_toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-left: 12px;
-}
-
 .toggle_btn {
   display: flex;
   gap: 6px;
@@ -307,24 +300,32 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--primary-normal);
+  cursor: pointer;
+}
+
+.toggle_btn img {
+  transition: 0.3s;
 }
 
 .toggle_btn.on img {
   transform: rotateZ(90deg);
 }
 
+.project_toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 12px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
 .project_toggle li {
-  /* ✅ TODO : 클릭이벤트 할 때 주석풀기 */
-  /* height: 0; */
-  /* overflow: hidden; */
   list-style: inside;
   font-size: 14px;
   font-weight: 500;
   color: var(--label-neutral);
-}
-
-.project_toggle.on li {
-  height: auto;
 }
 
 /* .section05 */
