@@ -374,11 +374,14 @@
   border: 1px solid var(--line-normal);
   border-radius: 16px;
   overflow: hidden;
+  padding: 16px;
+}
+
+.project_card a {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px;
-  cursor: pointer;
 }
 
 .card_contents {
