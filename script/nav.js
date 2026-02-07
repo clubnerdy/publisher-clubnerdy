@@ -1,5 +1,5 @@
-const navItems = document.querySelectorAll(".nav__item");
-const sections = document.querySelectorAll(".section");
+const navItems = document.querySelectorAll(".nav_item");
+const sections = document.querySelectorAll(".page_section");
 
 let lockSpy = false;
 let unlockTimer = null;
