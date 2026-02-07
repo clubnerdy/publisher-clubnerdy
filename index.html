@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="/style/bp.css" />
     <script src="/script/main.js" defer></script>
     <script src="/script/modal.js" defer></script>
+    <script src="/script/nav.js" defer></script>
   </head>
   <body>
-    <section class="section01 page_section">
+    <section id="section01" class="section01 page_section">
       <div class="inner">
         <div class="content">
           <figure class="main_icon">
@@ -34,49 +35,54 @@
           </p>
         </div>
         <!-- .content end -->
-        <div class="controller_container">
-          <button class="download_btn">
-            <!-- ✅ TODO: 이력서 첨부 -->
-            <a href="assets/doc/document_my.pdf" target="_blank">
-              <p>이력서 다운로드</p>
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 11.4033L3 14.1694C3 14.5886 3.15804 14.9906 3.43934 15.287C3.72064 15.5835 4.10218 15.75 4.5 15.75H13.5C13.8978 15.75 14.2794 15.5835 14.5607 15.287C14.842 14.9906 15 14.5886 15 14.1694V11.4033M9.00084 2.25V11.2068M9.00084 11.2068L12.4294 7.78447M9.00084 11.2068L5.57227 7.78447"
-                  stroke="#888888"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </button>
-          <!-- ✅ TODO: 네비게이션 이동동 기능 추가 -->
-          <nav class="main_nav">
-            <!-- 메인 네비게이션 -->
-            <figure><img src="assets/images/icon-nav.svg" alt="" /></figure>
-            <ul>
-              <li data-target=".section02">역량</li>
-              <li data-target=".section03">기술</li>
-              <li data-target=".section04">경력</li>
-              <li data-target=".section05">프로젝트</li>
-              <li data-target=".section07">Design Book</li>
-            </ul>
-          </nav>
-          <!-- .main_nav end -->
-        </div>
-        <!-- .controller_container end -->
+        <button class="download_btn">
+          <!-- ✅ TODO: 이력서 첨부 -->
+          <a href="assets/doc/document_my.pdf" target="_blank">
+            <p>이력서 다운로드</p>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 11.4033L3 14.1694C3 14.5886 3.15804 14.9906 3.43934 15.287C3.72064 15.5835 4.10218 15.75 4.5 15.75H13.5C13.8978 15.75 14.2794 15.5835 14.5607 15.287C14.842 14.9906 15 14.5886 15 14.1694V11.4033M9.00084 2.25V11.2068M9.00084 11.2068L12.4294 7.78447M9.00084 11.2068L5.57227 7.78447"
+                stroke="#888888"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </button>
       </div>
       <!-- .inner end -->
     </section>
     <!-- .section01 end -->
 
-    <section class="section02 page_section">
+    <!-- ✅ TODO: 네비게이션 이동 기능 추가 -->
+    <div class="nav_wrap">
+      <nav class="main_nav">
+        <!-- 메인 네비게이션 -->
+        <ul class="nav_list">
+          <li class="nav_item is-active" data-target="section01">
+            <figure>
+              <img src="assets/images/icon-nav.svg" alt="" />
+            </figure>
+          </li>
+          <li class="nav_item" data-target="section02">역량</li>
+          <li class="nav_item" data-target="section03">기술</li>
+          <li class="nav_item" data-target="section04">경력</li>
+          <li class="nav_item" data-target="section05">프로젝트</li>
+          <li class="nav_item" data-target="section07">Design Book</li>
+        </ul>
+      </nav>
+      <!-- .main_nav end -->
+    </div>
+    <!-- .nav_wrap end -->
+
+    <section id="section02" class="section02 page_section">
       <div class="inner">
         <h2 class="page_title">역량</h2>
         <ul class="ability_list list">
@@ -136,17 +142,17 @@
     </section>
     <!-- .section02 end -->
 
-    <section class="section03 page_section">
+    <section id="section03" class="section03 page_section">
       <div class="inner">
         <h2 class="page_title">기술</h2>
         <nav class="skill_nav">
           <!-- 기술 네비게이션 -->
           <!-- ✅ TODO: 클릭 이벤트 추가, 네비게이션 클릭 시 활성화되는 흰 배경 움직이게 -->
           <ul>
-            <li class="nav_item on" data-filter="all">All</li>
-            <li class="nav_item" data-filter="dev">Dev</li>
-            <li class="nav_item" data-filter="design">Design</li>
-            <li class="nav_item" data-filter="collab">Collab</li>
+            <li class="skill_item on" data-filter="all">All</li>
+            <li class="skill_item" data-filter="dev">Dev</li>
+            <li class="skill_item" data-filter="design">Design</li>
+            <li class="skill_item" data-filter="collab">Collab</li>
           </ul>
           <div class="nav_indicator"></div>
         </nav>
@@ -220,7 +226,7 @@
     </section>
     <!-- .section03 end -->
 
-    <section class="section04 page_section">
+    <section id="section04" class="section04 page_section">
       <div class="inner">
         <div class="title_container">
           <h2 class="page_title">경력</h2>
@@ -536,7 +542,7 @@
     </section>
     <!-- .section04 end -->
 
-    <section class="section05 page_section">
+    <section id="section05" class="section05 page_section">
       <div class="inner">
         <div class="title_container">
           <p class="page_description">프로젝트 상세보기</p>
@@ -544,7 +550,10 @@
         </div>
         <ul class="project_container container">
           <li class="project_card card">
-            <a href="https://bevel-balmoral-242.notion.site/2c2adb511d7980159882dbe1b548e2d9?source=copy_link" target="_blank">
+            <a
+              href="https://bevel-balmoral-242.notion.site/2c2adb511d7980159882dbe1b548e2d9?source=copy_link"
+              target="_blank"
+            >
               <div class="card_contents">
                 <div class="card_top">
                   <figure>
@@ -558,9 +567,9 @@
                 <div class="card_middle">
                   <h3 class="card_title">소수의원 홈페이지 리브랜딩</h3>
                   <p class="card_description">
-                    성수동 위치 피부과 소수의원의 홈페이지 리브랜딩. 메인페이지와
-                    시술 상세페이지 리디자인, 네이버 지도 API 추가로 네이버
-                    플레이스 연동
+                    성수동 위치 피부과 소수의원의 홈페이지 리브랜딩.
+                    메인페이지와 시술 상세페이지 리디자인, 네이버 지도 API
+                    추가로 네이버 플레이스 연동
                   </p>
                 </div>
               </div>
@@ -572,19 +581,28 @@
                 </li>
                 <li>
                   <figure>
-                    <img src="assets/images/skill_icon/nextjs.svg" alt="NextJa" />
+                    <img
+                      src="assets/images/skill_icon/nextjs.svg"
+                      alt="NextJa"
+                    />
                   </figure>
                 </li>
                 <li>
                   <figure>
-                    <img src="assets/images/skill_icon/ts.svg" alt="TypeScript" />
+                    <img
+                      src="assets/images/skill_icon/ts.svg"
+                      alt="TypeScript"
+                    />
                   </figure>
                 </li>
               </ul>
             </a>
           </li>
           <li class="project_card card">
-            <a href="https://bevel-balmoral-242.notion.site/GLS-2c2adb511d798038b738fd1a6d4c7308?source=copy_link" target="_blank">
+            <a
+              href="https://bevel-balmoral-242.notion.site/GLS-2c2adb511d798038b738fd1a6d4c7308?source=copy_link"
+              target="_blank"
+            >
               <div class="card_contents">
                 <div class="card_top">
                   <figure>
@@ -597,13 +615,13 @@
                 </div>
                 <div class="card_middle">
                   <h3 class="card_title">
-                    GPS 기반 실시간 물류 조회 서비스 해우GLS 하이브리드 앱 프론트
-                    개발
+                    GPS 기반 실시간 물류 조회 서비스 해우GLS 하이브리드 앱
+                    프론트 개발
                   </h3>
                   <p class="card_description">
                     GPS를 기반으로 화주와 포워드사가 물류 이동 상태와 경로, 예상
-                    시간을 확인할 수 있는 서비스를 제공. JavaScript 및 HTML, CSS로
-                    제작되어 웹앱 형태로 크로스 브라우징 구현.
+                    시간을 확인할 수 있는 서비스를 제공. JavaScript 및 HTML,
+                    CSS로 제작되어 웹앱 형태로 크로스 브라우징 구현.
                   </p>
                 </div>
               </div>
@@ -620,7 +638,10 @@
                 </li>
                 <li>
                   <figure>
-                    <img src="assets/images/skill_icon/js.svg" alt="JavaScript" />
+                    <img
+                      src="assets/images/skill_icon/js.svg"
+                      alt="JavaScript"
+                    />
                   </figure>
                 </li>
               </ul>
@@ -631,7 +652,10 @@
               <div class="card_contents">
                 <div class="card_top">
                   <figure>
-                    <img src="assets/images/project_icon/ball.svg" alt="볼까예" />
+                    <img
+                      src="assets/images/project_icon/ball.svg"
+                      alt="볼까예"
+                    />
                   </figure>
                   <span class="service">Demo</span>
                 </div>
@@ -668,7 +692,10 @@
               <div class="card_contents">
                 <div class="card_top">
                   <figure>
-                    <img src="assets/images/project_icon/jjava.svg" alt="짜바" />
+                    <img
+                      src="assets/images/project_icon/jjava.svg"
+                      alt="짜바"
+                    />
                   </figure>
                   <span class="service">Demo</span>
                 </div>
@@ -814,7 +841,7 @@
     </section> -->
     <!-- .section06 end -->
 
-    <section class="section07 page_section">
+    <section id="section07" class="section07 page_section">
       <div class="inner">
         <div class="title_container">
           <h2 class="page_title">Design Book</h2>
@@ -982,7 +1009,7 @@
     </section>
     <!-- .section07 end -->
 
-    <section class="section08 page_section">
+    <section id="section08" class="section08 page_section">
       <div class="inner">
         <ul class="edu_list">
           <li class="content">
@@ -1074,7 +1101,7 @@
     </section>
     <!-- .section08 end -->
 
-    <footer class="section09 page_section">
+    <footer id="section09" class="section09 page_section">
       <div class="inner">
         <h2 class="page_title">
           감사합니다<br />

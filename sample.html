@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -8,23 +8,21 @@
     <script src="script/sample.js" defer></script>
   </head>
   <body>
-    <section>
-      <!-- 탭 버튼들 -->
-      <nav class="tab-nav">
-        <button class="tab active" data-filter="all">All</button>
-        <button class="tab" data-filter="dev">Dev</button>
-        <button class="tab" data-filter="design">Design</button>
-        <button class="tab" data-filter="collab">Collab</button>
-        <span class="indicator"></span>
-      </nav>
-
-      <!-- 아이템들 -->
-      <ul class="items">
-        <li class="item" data-category="dev">Dev 1</li>
-        <li class="item" data-category="dev">Dev 2</li>
-        <li class="item" data-category="design">Design 1</li>
-        <li class="item" data-category="collab">Collab 1</li>
+    <section id="section1" class="section">1</section>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item is-active" data-target="section1">Section 1</li>
+        <li class="nav__item" data-target="section2">Section 2</li>
+        <li class="nav__item" data-target="section3">Section 3</li>
+        <li class="nav__item" data-target="section4">Section 4</li>
+        <li class="nav__item" data-target="section5">Section 5</li>
+        <li class="nav__item" data-target="section6">Section 6</li>
       </ul>
-    </section>
+    </nav>
+    <section id="section2" class="section">2</section>
+    <section id="section3" class="section">3</section>
+    <section id="section4" class="section">4</section>
+    <section id="section5" class="section">5</section>
+    <section id="section6" class="section">6</section>
   </body>
 </html>
