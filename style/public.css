@@ -294,6 +294,9 @@
   display: flex;
   flex-direction: column;
   gap: 44px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
 
 .career_item {
@@ -311,6 +314,7 @@
 .project_title {
   font-size: 16px;
   font-weight: 500;
+  color: var(--primary-normal);
 }
 
 .project_period {
@@ -322,7 +326,13 @@
 .project_contents {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
+}
+
+.project_contents li {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--label-neutral);
 }
 
 .toggle_btn {
@@ -330,34 +340,17 @@
   gap: 6px;
   align-items: center;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--primary-normal);
+  font-weight: 600;
+  color: var(--label-neutral);
   cursor: pointer;
 }
 
-.toggle_btn img {
+.toggle_btn svg {
   transition: 0.3s;
 }
 
-.toggle_btn.on img {
+.toggle_btn.on svg {
   transform: rotateZ(90deg);
-}
-
-.project_toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-left: 12px;
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease;
-}
-
-.project_toggle li {
-  list-style: inside;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--label-neutral);
 }
 
 /* .section05 */

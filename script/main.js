@@ -27,7 +27,7 @@ tabs.forEach((tab) => {
 tabs[0].click();
 
 // 경력 자세히보기 토글 이벤트
-const projectToggles = document.querySelectorAll(".project_toggle");
+const projectToggles = document.querySelectorAll(".career_projects");
 
 projectToggles.forEach((content) => {
   if (content.classList.contains("on")) {
