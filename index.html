@@ -1,4 +1,5 @@
 <!doctype html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -15,8 +16,10 @@
     <script src="/script/main.js" defer></script>
     <script src="/script/modal.js" defer></script>
     <script src="/script/nav.js" defer></script>
+    <script src="/script/nav.js" defer></script>
   </head>
   <body>
+    <section id="section01" class="section01 page_section">
     <section id="section01" class="section01 page_section">
       <div class="inner">
         <div class="content">
@@ -61,7 +64,6 @@
     </section>
     <!-- .section01 end -->
 
-    <!-- ✅ TODO: 네비게이션 이동 기능 추가 -->
     <div class="nav_wrap">
       <nav class="main_nav">
         <!-- 메인 네비게이션 -->
@@ -82,6 +84,7 @@
     </div>
     <!-- .nav_wrap end -->
 
+    <section id="section02" class="section02 page_section">
     <section id="section02" class="section02 page_section">
       <div class="inner">
         <h2 class="page_title">역량</h2>
@@ -143,12 +146,17 @@
     <!-- .section02 end -->
 
     <section id="section03" class="section03 page_section">
+    <section id="section03" class="section03 page_section">
       <div class="inner">
         <h2 class="page_title">기술</h2>
         <nav class="skill_nav">
           <!-- 기술 네비게이션 -->
           <!-- ✅ TODO: 클릭 이벤트 추가, 네비게이션 클릭 시 활성화되는 흰 배경 움직이게 -->
           <ul>
+            <li class="skill_item on" data-filter="all">All</li>
+            <li class="skill_item" data-filter="dev">Dev</li>
+            <li class="skill_item" data-filter="design">Design</li>
+            <li class="skill_item" data-filter="collab">Collab</li>
             <li class="skill_item on" data-filter="all">All</li>
             <li class="skill_item" data-filter="dev">Dev</li>
             <li class="skill_item" data-filter="design">Design</li>
@@ -227,6 +235,7 @@
     <!-- .section03 end -->
 
     <section id="section04" class="section04 page_section">
+    <section id="section04" class="section04 page_section">
       <div class="inner">
         <div class="title_container">
           <h2 class="page_title">경력</h2>
@@ -252,6 +261,24 @@
                 </p>
               </div>
               <!-- .company_meta end -->
+              <p class="toggle_btn">
+                <svg
+                  width="10"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.70999 10.75L7.28999 5.74919L2.70999 0.75"
+                    stroke="#565656"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                주요 업무 내용 보기
+              </p>
               <ul class="career_projects">
                 <li class="career_item">
                   <div class="project_header">
@@ -260,53 +287,35 @@
                     </p>
                     <span class="project_period">2024.05 - 2024.09</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>GPS 기반 실시간 물류조회 서비스 앱 제작</li>
-                      <li>웹 페이지, 앱 화면 기획 및 디자인, 퍼블리싱</li>
-                      <li>화주, 입직원, 운송자 대상 통합 물류 플랫폼</li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- GPS 기반 실시간 물류조회 서비스 앱 제작</li>
+                    <li>- 웹 페이지, 앱 화면 기획 및 디자인, 퍼블리싱</li>
+                    <li>- 화주, 입직원, 운송자 대상 통합 물류 플랫폼</li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">자사 홈페이지 제작</p>
                     <span class="project_period">2024.08 - 2024.9</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>자사 홈페이지 기획 및 디자인</li>
-                      <li>인터렉티브 반응형 웹 페이지 퍼블리싱</li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 자사 홈페이지 기획 및 디자인</li>
+                    <li>- 인터렉티브 반응형 웹 페이지 퍼블리싱</li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">자사 서비스 머니트리 웹 제작</p>
                     <span class="project_period">2024.06 - 2024.8</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        자사에서 서비스하는 통합 광고 관리 플랫폼 페이지 제작
-                      </li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 자사에서 서비스하는 통합 광고 관리 플랫폼 페이지 제작
+                    </li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
@@ -315,145 +324,97 @@
                     </p>
                     <span class="project_period">2024.05 - 2024.6</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        서울 성수동 위치 피부과 소수의원 홈페이지 리브랜딩
-                      </li>
-                      <li>메인페이지 / 시술 상세페이지 리디자인</li>
-                      <li>네이버 지도 API 추가로 네이버 플레이스 연동</li>
-                      <li>사용기술: React / Next / TypeScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 서울 성수동 위치 피부과 소수의원 홈페이지 리브랜딩
+                    </li>
+                    <li>- 메인페이지 / 시술 상세페이지 리디자인</li>
+                    <li>- 네이버 지도 API 추가로 네이버 플레이스 연동</li>
+                    <li>- 사용기술: React / Next / TypeScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">나비에이전시 홈페이지 제작</p>
                     <span class="project_period">2024.01 - 2024.1</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>자사 플랫폼 홈페이지 기획 및 디자인</li>
-                      <li>인터렉티브 반응형 웹 페이지 퍼블리싱</li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 자사 플랫폼 홈페이지 기획 및 디자인</li>
+                    <li>- 인터렉티브 반응형 웹 페이지 퍼블리싱</li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">자사 주얼리 브랜드 노바 브랜딩</p>
                     <span class="project_period">2024.10 - 2024.12</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>주얼리 브랜드 노바 로고 제작 및 아이덴티티 구축</li>
-                      <li>주얼리 상품 셀렉트 및 관리</li>
-                      <li>자사몰 기획 및 카페24 결제 시스템 세팅</li>
-                      <li>상품 및 모델 촬영 및 보정</li>
-                      <li>패키지 기획 및 디자인, 제작 관리</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 주얼리 브랜드 노바 로고 제작 및 아이덴티티 구축</li>
+                    <li>- 주얼리 상품 셀렉트 및 관리</li>
+                    <li>- 자사몰 기획 및 카페24 결제 시스템 세팅</li>
+                    <li>- 상품 및 모델 촬영 및 보정</li>
+                    <li>- 패키지 기획 및 디자인, 제작 관리</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">브랜딩 및 인쇄물 제작</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>기업 로고 리브랜딩</li>
-                      <li>자사 상품 브로슈어 제작</li>
-                      <li>임직원 명함 디자인 및 제작 관리</li>
-                      <li>패키지 디자인 및 인쇄 퀄리티 관리</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 기업 로고 리브랜딩</li>
+                    <li>- 자사 상품 브로슈어 제작</li>
+                    <li>- 임직원 명함 디자인 및 제작 관리</li>
+                    <li>- 패키지 디자인 및 인쇄 퀄리티 관리</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">실무 문서 디자인</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        대외용 회사소개서 및 영업 제안서 다수 기획 및 디자인
-                      </li>
-                      <li>영업 실무 목적의 맞춤형 제안서 PPT 디자인 및 구성</li>
-                      <li>
-                        브랜드 성격에 맞춘 비주얼/카피 톤으로 회사 소개서 및
-                        제안서 제작
-                      </li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 대외용 회사소개서 및 영업 제안서 다수 기획 및 디자인
+                    </li>
+                    <li>- 영업 실무 목적의 맞춤형 제안서 PPT 디자인 및 구성</li>
+                    <li>
+                      - 브랜드 성격에 맞춘 비주얼/카피 톤으로 회사 소개서 및
+                      제안서 제작
+                    </li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">상세페이지 디자인</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        브랜드 이미지에 맞춘 상세페이지 디자인 및 썸네일 제작
-                      </li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 브랜드 이미지에 맞춘 상세페이지 디자인 및 썸네일 제작
+                    </li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">숏폼 제작</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>지역 소상공인 대상 숏폼 제작</li>
-                      <li>현장 조사 및 영상 기획</li>
-                      <li>현장 촬영 및 상품 연출</li>
-                      <li>Adobe 툴을 활용한 영상 편집 및 TTS 활용 더빙 작업</li>
-                      <li>SNS 숏폼 업로드 및 계정 관리</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 지역 소상공인 대상 숏폼 제작</li>
+                    <li>- 현장 조사 및 영상 기획</li>
+                    <li>- 현장 촬영 및 상품 연출</li>
+                    <li>- Adobe 툴을 활용한 영상 편집 및 TTS 활용 더빙 작업</li>
+                    <li>- SNS 숏폼 업로드 및 계정 관리</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">블로그 관리</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>자사 블로그 관리 및 컨텐츠 제작</li>
-                      <li>세종TSI 세무사무소 블로그 기획</li>
-                      <li>세종TSI 블로그 스킨 디자인</li>
-                      <li>세종TSI 블로그 컨텐츠 디자인 및 제작</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 자사 블로그 관리 및 컨텐츠 제작</li>
+                    <li>- 세종TSI 세무사무소 블로그 기획</li>
+                    <li>- 세종TSI 블로그 스킨 디자인</li>
+                    <li>- 세종TSI 블로그 컨텐츠 디자인 및 제작</li>
+                  </ul>
                 </li>
               </ul>
               <!-- .career_projects end -->
@@ -478,59 +439,59 @@
                 </p>
               </div>
               <!-- .company_meta end -->
+              <p class="toggle_btn">
+                <svg
+                  width="10"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.70999 10.75L7.28999 5.74919L2.70999 0.75"
+                    stroke="#565656"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                주요 업무 내용 보기
+              </p>
               <ul class="career_projects">
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">광고 컨텐츠 디자인</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>브랜드 블로그 기획 및 컨텐츠 이미지 디자인</li>
-                      <li>브랜드 인스타그램 컨텐츠 이미지 디자인</li>
-                      <li>병/의원 원내 브로슈어 디자인</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 브랜드 블로그 기획 및 컨텐츠 이미지 디자인</li>
+                    <li>- 브랜드 인스타그램 컨텐츠 이미지 디자인</li>
+                    <li>- 병/의원 원내 브로슈어 디자인</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">광고 컨텐츠 제작 및 발행</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>광고 키워드 도출 및 키워드 관련 브랜딩</li>
-                      <li>블로그 컨텐츠 및 인스타그램 컨텐츠 발행</li>
-                      <li>포털 기사 컨텐츠 제작 및 발행</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 광고 키워드 도출 및 키워드 관련 브랜딩</li>
+                    <li>- 블로그 컨텐츠 및 인스타그램 컨텐츠 발행</li>
+                    <li>- 포털 기사 컨텐츠 제작 및 발행</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">광고 성과 분석</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="assets/images/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        플랫폼 별 유입 / 조회 / 전환 지표 수집 및 비교 분석
-                      </li>
-                      <li>
-                        키워드 별 유입률, 콘텐츠 반응률 등 광고 효과 정기
-                        모니터링
-                      </li>
-                      <li>분석 결과 기반 콘텐츠 개선 방향 도출 및 적용</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 플랫폼 별 유입 / 조회 / 전환 지표 수집 및 비교 분석
+                    </li>
+                    <li>
+                      - 키워드 별 유입률, 콘텐츠 반응률 등 광고 효과 정기
+                      모니터링
+                    </li>
+                    <li>- 분석 결과 기반 콘텐츠 개선 방향 도출 및 적용</li>
+                  </ul>
                 </li>
               </ul>
               <!-- .career_projects end -->
@@ -543,6 +504,7 @@
     <!-- .section04 end -->
 
     <section id="section05" class="section05 page_section">
+    <section id="section05" class="section05 page_section">
       <div class="inner">
         <div class="title_container">
           <p class="page_description">프로젝트 상세보기</p>
@@ -550,6 +512,10 @@
         </div>
         <ul class="project_container container">
           <li class="project_card card">
+            <a
+              href="https://bevel-balmoral-242.notion.site/2c2adb511d7980159882dbe1b548e2d9?source=copy_link"
+              target="_blank"
+            >
             <a
               href="https://bevel-balmoral-242.notion.site/2c2adb511d7980159882dbe1b548e2d9?source=copy_link"
               target="_blank"
@@ -570,6 +536,9 @@
                     성수동 위치 피부과 소수의원의 홈페이지 리브랜딩.
                     메인페이지와 시술 상세페이지 리디자인, 네이버 지도 API
                     추가로 네이버 플레이스 연동
+                    성수동 위치 피부과 소수의원의 홈페이지 리브랜딩.
+                    메인페이지와 시술 상세페이지 리디자인, 네이버 지도 API
+                    추가로 네이버 플레이스 연동
                   </p>
                 </div>
               </div>
@@ -585,10 +554,18 @@
                       src="assets/images/skill_icon/nextjs.svg"
                       alt="NextJa"
                     />
+                    <img
+                      src="assets/images/skill_icon/nextjs.svg"
+                      alt="NextJa"
+                    />
                   </figure>
                 </li>
                 <li>
                   <figure>
+                    <img
+                      src="assets/images/skill_icon/ts.svg"
+                      alt="TypeScript"
+                    />
                     <img
                       src="assets/images/skill_icon/ts.svg"
                       alt="TypeScript"
@@ -599,6 +576,10 @@
             </a>
           </li>
           <li class="project_card card">
+            <a
+              href="https://bevel-balmoral-242.notion.site/GLS-2c2adb511d798038b738fd1a6d4c7308?source=copy_link"
+              target="_blank"
+            >
             <a
               href="https://bevel-balmoral-242.notion.site/GLS-2c2adb511d798038b738fd1a6d4c7308?source=copy_link"
               target="_blank"
@@ -617,9 +598,13 @@
                   <h3 class="card_title">
                     GPS 기반 실시간 물류 조회 서비스 해우GLS 하이브리드 앱
                     프론트 개발
+                    GPS 기반 실시간 물류 조회 서비스 해우GLS 하이브리드 앱
+                    프론트 개발
                   </h3>
                   <p class="card_description">
                     GPS를 기반으로 화주와 포워드사가 물류 이동 상태와 경로, 예상
+                    시간을 확인할 수 있는 서비스를 제공. JavaScript 및 HTML,
+                    CSS로 제작되어 웹앱 형태로 크로스 브라우징 구현.
                     시간을 확인할 수 있는 서비스를 제공. JavaScript 및 HTML,
                     CSS로 제작되어 웹앱 형태로 크로스 브라우징 구현.
                   </p>
@@ -642,6 +627,10 @@
                       src="assets/images/skill_icon/js.svg"
                       alt="JavaScript"
                     />
+                    <img
+                      src="assets/images/skill_icon/js.svg"
+                      alt="JavaScript"
+                    />
                   </figure>
                 </li>
               </ul>
@@ -652,6 +641,10 @@
               <div class="card_contents">
                 <div class="card_top">
                   <figure>
+                    <img
+                      src="assets/images/project_icon/ball.svg"
+                      alt="볼까예"
+                    />
                     <img
                       src="assets/images/project_icon/ball.svg"
                       alt="볼까예"
@@ -696,6 +689,10 @@
                       src="assets/images/project_icon/jjava.svg"
                       alt="짜바"
                     />
+                    <img
+                      src="assets/images/project_icon/jjava.svg"
+                      alt="짜바"
+                    />
                   </figure>
                   <span class="service">Demo</span>
                 </div>
@@ -733,113 +730,6 @@
       <!-- .inner end -->
     </section>
     <!-- .section05 end -->
-
-    <!-- <section class="section06 page_section">
-      <div class="inner">
-        <h2 class="page_title">블로그</h2>
-        <ul class="blog_container container">
-          ✅ TODO : 블로그 최신 글 연동 및 더보기 버튼 블로그 링크 연결
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img
-                    src="assets/images/icon-arrow-white.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img
-                    src="assets/images/icon-arrow-white.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img
-                    src="assets/images/icon-arrow-white.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img
-                    src="assets/images/icon-arrow-white.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img
-                    src="assets/images/icon-arrow-white.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img
-                    src="assets/imagesicon-arrow-white.svg"
-                    alt=""
-                  />
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <button class="more_btn">더보기</button>
-      </div>
-    </section> -->
-    <!-- .section06 end -->
 
     <section id="section07" class="section07 page_section">
       <div class="inner">
@@ -1010,6 +900,7 @@
     <!-- .section07 end -->
 
     <section id="section08" class="section08 page_section">
+    <section id="section08" class="section08 page_section">
       <div class="inner">
         <ul class="edu_list">
           <li class="content">
@@ -1102,6 +993,7 @@
     <!-- .section08 end -->
 
     <footer id="section09" class="section09 page_section">
+    <footer id="section09" class="section09 page_section">
       <div class="inner">
         <h2 class="page_title">
           감사합니다<br />
@@ -1134,86 +1026,5 @@
       <!-- .inner end -->
     </footer>
     <!-- .section09 end -->
-
-    <!-- modal -->
-    <!-- <div class="modal" id="modal" onclick="closeModalOnBackground(event)">
-      <div class="modal_box">
-        <div class="modal_inner">
-          <div class="modal_top">
-            <figure>
-              <img src="assets/images/project_image/sosu.png" alt="소수의원" />
-            </figure>
-            <div class="close_btn" onclick="closeModal()">
-              <img src="assets/images/icon-close.png" alt="" />
-            </div>
-          </div>
-          <ul class="modal_content">
-            <li class="modal_project_name">
-              <h3>프로젝트명</h3>
-              <p>소수의원 홈페이지 리브랜딩</p>
-            </li>
-            <li>
-              <h3>작업기간</h3>
-              <p>2개월</p>
-            </li>
-            <li>
-              <h3>사용기술</h3>
-              <ul class="modal_skill">
-                <li class="skill_dev">HTML5</li>
-                <li class="skill_dev">CSS3</li>
-                <li class="skill_dev">TypeScript</li>
-                <li class="skill_dev">React</li>
-                <li class="skill_dev">Next.js</li>
-                <li class="skill_design">Figma</li>
-              </ul>
-            </li>
-            <li>
-              <h3>주요 개선 사항</h3>
-              <ul class="modal_templete">
-                <li>
-                  <h5 class="modal_sub_title">브랜드 아이덴티티 강화</h5>
-                  <p class="modal_description">
-                    병원의 분위기와 철학을 반영한 비주얼 시스템을 구축하여
-                    일관된 브랜드 경험을 제공했습니다.
-                  </p>
-                </li>
-                <li>
-                  <h5 class="modal_sub_title">시술 정보 콘텐츠 재구성</h5>
-                  <p class="modal_description">
-                    각 시술 페이지마다 적용 대상, 시술 과정, 차별화 포인트 등의
-                    정보를 체계적으로 구성했습니다. 이를 통해 고객이 시술에 대해
-                    충분히 이해하고 신뢰를 바탕으로 의사결정을 내릴 수 있도록
-                    했습니다.
-                  </p>
-                </li>
-                <li>
-                  <h5 class="modal_sub_title">반응형 디자인 구현</h5>
-                  <p class="modal_description">
-                    모바일, 태블릿, 데스크톱 등 모든 디바이스에서 최적화된
-                    사용자 경험을 제공했습니다.
-                  </p>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>문제와 해결</h3>
-              <p>
-                이 프로젝트는 React, Next.js, TypeScript를 처음 다루는 상황에서
-                시작되었습니다. 특히 이미 구축된 기존 웹사이트에 새로운 디자인을
-                적용하는 과정에서
-                <span
-                  >기존 코드 구조 파악 및 컴포넌트 재사용성 고려, TypeScript
-                  타입 시스템 이해 및 적용</span
-                >에 대한 부분에 어려움이 있었습니다. 이러한 과제들을
-                <span
-                  >공식 문서 학습과 시행착오를 통해 해결하며, 개발 역량을 크게
-                  성장</span
-                >시킬 수 있었습니다.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
   </body>
 </html>
