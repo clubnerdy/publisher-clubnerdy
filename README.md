@@ -40,6 +40,7 @@ HTML, CSS, JavaScript 기반으로 먼저 구현한 뒤, 최종 버전은 **Reac
 ├── /script
 │   └── main.js
 └── /assets
+    ├── doc
     └── images
 ```
 
@@ -51,7 +52,7 @@ HTML, CSS, JavaScript 기반으로 먼저 구현한 뒤, 최종 버전은 **Reac
 ### 1. 이 레포지토리를 클론합니다.
 
 ```bash
-git clone https://github.com/USERNAME/REPO_NAME.git
+git clone https://github.com/clubnerdy/publisher-clubnerdy.git
 ```
 
 ### 2. index.html 파일을 브라우저로 열면 바로 확인할 수 있습니다.
@@ -66,5 +67,3 @@ git clone https://github.com/USERNAME/REPO_NAME.git
 - 컴포넌트 단위로 섹션 분리
 
 - 프로젝트 데이터/프로필 정보를 JSON 또는 JS 객체로 관리
-
-- 필요 시 라우팅 구조 적용 (예: 프로젝트 상세 페이지 등)
