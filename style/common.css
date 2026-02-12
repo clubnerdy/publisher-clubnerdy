@@ -72,9 +72,6 @@ body {
 
 /* 반응형 */
 @media (max-width: 640px) {
-  :root {
-  }
-
   .inner {
     max-width: 80%;
     min-width: calc(100% - 32px);
