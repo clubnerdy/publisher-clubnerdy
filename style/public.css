@@ -528,11 +528,14 @@
   gap: 28px;
 }
 
-.book_card {
+.book_card.non-event {
+  pointer-events: none;
+}
+
+.book_card a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  cursor: pointer;
 }
 
 .book_card figure {
