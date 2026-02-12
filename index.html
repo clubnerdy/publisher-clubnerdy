@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -12,14 +13,16 @@
     />
     <link rel="stylesheet" href="/style/public.css" />
     <link rel="stylesheet" href="/style/bp.css" />
-    <script src="/script/public.js" defer></script>
+    <script src="/script/main.js" defer></script>
+    <script src="/script/modal.js" defer></script>
+    <script src="/script/nav.js" defer></script>
   </head>
   <body>
-    <section class="section01 page_section">
+    <section id="section01" class="section01 page_section">
       <div class="inner">
         <div class="content">
           <figure class="main_icon">
-            <img src="public/brain.png" alt="" />
+            <img src="assets/images/brain.png" alt="" />
           </figure>
           <h2 class="main_title">
             안녕하세요,<br />
@@ -33,85 +36,104 @@
           </p>
         </div>
         <!-- .content end -->
-        <div class="controller_container">
-          <button class="download_btn">
-            <!-- ✅ TODO: 이력서 첨부 -->
-            <a href="https://www.google.com" target="_blank">
-              <p>이력서 다운로드</p>
-              <img src="public/icon-download.svg" alt="다운로드" />
-            </a>
-          </button>
-          <!-- ✅ TODO: 네비게이션 이동동 기능 추가 -->
-          <nav class="main_nav">
-            <!-- 메인 네비게이션 -->
-            <figure><img src="public/icon-nav.svg" alt="" /></figure>
-            <ul>
-              <li>역량</li>
-              <li>기술</li>
-              <li>경력</li>
-              <li>프로젝트</li>
-              <li>블로그</li>
-              <li>Book</li>
-            </ul>
-          </nav>
-          <!-- .main_nav end -->
-        </div>
-        <!-- .controller_container end -->
+        <button class="download_btn">
+          <!-- ✅ TODO: 이력서 첨부 -->
+          <a href="assets/doc/document_my.pdf" target="_blank">
+            <p>이력서 다운로드</p>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 11.4033L3 14.1694C3 14.5886 3.15804 14.9906 3.43934 15.287C3.72064 15.5835 4.10218 15.75 4.5 15.75H13.5C13.8978 15.75 14.2794 15.5835 14.5607 15.287C14.842 14.9906 15 14.5886 15 14.1694V11.4033M9.00084 2.25V11.2068M9.00084 11.2068L12.4294 7.78447M9.00084 11.2068L5.57227 7.78447"
+                stroke="#888888"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </button>
       </div>
       <!-- .inner end -->
     </section>
     <!-- .section01 end -->
 
-    <section class="section02 page_section">
+    <div class="nav_wrap">
+      <nav class="main_nav">
+        <!-- 메인 네비게이션 -->
+        <ul class="nav_list">
+          <li class="nav_item is-active" data-target="section01">
+            <figure>
+              <img src="assets/images/icon-nav.svg" alt="" />
+            </figure>
+          </li>
+          <li class="nav_item" data-target="section02">역량</li>
+          <li class="nav_item" data-target="section03">기술</li>
+          <li class="nav_item" data-target="section04">경력</li>
+          <li class="nav_item" data-target="section05">프로젝트</li>
+          <li class="nav_item" data-target="section07">Design Book</li>
+        </ul>
+      </nav>
+      <!-- .main_nav end -->
+    </div>
+    <!-- .nav_wrap end -->
+
+    <section id="section02" class="section02 page_section">
       <div class="inner">
         <h2 class="page_title">역량</h2>
         <ul class="ability_list list">
           <!-- ✅ TODO: 이미지 넣기 -->
-          <!-- ✅ TODO: 이미지 넣기 -->
           <li class="item">
-            <a href="/">
-              <figure>
-                <img src="" alt="더미 이미지" />
-              </figure>
-              <div>
-                <h3>UI 설계와 퍼블리싱</h3>
-                <p>
-                  세밀한 인터페이스 설계와 픽셀 단위 구현에 능숙합니다. HTML,
-                  CSS, JavaScript를 활용해 반응형 웹을 제작하며, 접근성과
-                  크로스브라우징을 고려해 일관된 사용자 경험을 제공합니다.
-                </p>
-              </div>
-            </a>
+            <figure>
+              <img
+                src="assets/images/ability/01.svg"
+                alt="UI 설계와 퍼블리싱"
+              />
+            </figure>
+            <div>
+              <h3>UI 설계와 퍼블리싱</h3>
+              <p>
+                세밀한 인터페이스 설계와 픽셀 단위 구현에 능숙합니다. HTML, CSS,
+                JavaScript를 활용해 반응형 웹을 제작하며, 접근성과
+                크로스브라우징을 고려해 일관된 사용자 경험을 제공합니다.
+              </p>
+            </div>
           </li>
           <li class="item">
-            <a href="/">
-              <figure>
-                <img src="" alt="더미 이미지" />
-              </figure>
-              <div>
-                <h3>레이아웃 구성 능력</h3>
-                <p>
-                  Flutter를 활용해 직관적이고 구조적인 화면을 구현합니다. 디자인
-                  시안을 실제 서비스 화면으로 빠르고 정확하게 옮길 수 있으며,
-                  코드 구조와 재사용성을 고려한 화면 설계를 지향합니다.
-                </p>
-              </div>
-            </a>
+            <figure>
+              <img
+                src="assets/images/ability/02.png"
+                alt="레이아웃 구성 능력"
+              />
+            </figure>
+            <div>
+              <h3>레이아웃 구성 능력</h3>
+              <p>
+                Flutter를 활용해 직관적이고 구조적인 화면을 구현합니다. 디자인
+                시안을 실제 서비스 화면으로 빠르고 정확하게 옮길 수 있으며, 코드
+                구조와 재사용성을 고려한 화면 설계를 지향합니다.
+              </p>
+            </div>
           </li>
           <li class="item">
-            <a href="/">
-              <figure>
-                <img src="" alt="더미 이미지" />
-              </figure>
-              <div>
-                <h3>협업과 커뮤니케이션</h3>
-                <p>
-                  Git과 Notion을 활용해 체계적으로 협업합니다. 디자인과 개발
-                  사이의 연결을 매끄럽게 조율하며, 작업 과정과 결과물을 명확하게
-                  공유할 수 있습니다.
-                </p>
-              </div>
-            </a>
+            <figure>
+              <img
+                src="assets/images/ability/03.png"
+                alt="협업과 커뮤니케이션"
+              />
+            </figure>
+            <div>
+              <h3>협업과 커뮤니케이션</h3>
+              <p>
+                Git과 Notion을 활용해 체계적으로 협업합니다. 디자인과 개발
+                사이의 연결을 매끄럽게 조율하며, 작업 과정과 결과물을 명확하게
+                공유할 수 있습니다.
+              </p>
+            </div>
           </li>
         </ul>
         <!-- .ability_list end -->
@@ -120,80 +142,82 @@
     </section>
     <!-- .section02 end -->
 
-    <section class="section03 page_section">
+    <section id="section03" class="section03 page_section">
       <div class="inner">
         <h2 class="page_title">기술</h2>
         <nav class="skill_nav">
           <!-- 기술 네비게이션 -->
           <!-- ✅ TODO: 클릭 이벤트 추가, 네비게이션 클릭 시 활성화되는 흰 배경 움직이게 -->
           <ul>
-            <li class="nav_item on">Dev</li>
-            <li class="nav_item">Design</li>
-            <li class="nav_item">Collab</li>
+            <li class="skill_item on" data-filter="all">All</li>
+            <li class="skill_item" data-filter="dev">Dev</li>
+            <li class="skill_item" data-filter="design">Design</li>
+            <li class="skill_item" data-filter="collab">Collab</li>
           </ul>
+          <div class="nav_indicator"></div>
         </nav>
         <!-- .skill_nav end -->
         <ul class="skill_list list">
           <!-- ✅ TODO: 클릭 이벤트 추가-->
-          <li class="item dev on">
-            <img src="public/skill_icon/html.svg" alt="HTML" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/html.svg" alt="HTML" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/css.svg" alt="CSS" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/css.svg" alt="CSS" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/js.svg" alt="JavaScript" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/js.svg" alt="JavaScript" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/bootstrap.svg" alt="BootStrap" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/bootstrap.svg" alt="BootStrap" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/dart.svg" alt="Dart" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/dart.svg" alt="Dart" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/flutter.svg" alt="Flutter" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/flutter.svg" alt="Flutter" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/mysql.svg" alt="MySql" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/mysql.svg" alt="MySql" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/react.svg" alt="React" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/react.svg" alt="React" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/nextjs.svg" alt="NestJs" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/nextjs.svg" alt="NestJs" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/ts.svg" alt="TypeScript" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/ts.svg" alt="TypeScript" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/java.svg" alt="Java" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/java.svg" alt="Java" />
           </li>
-          <li class="item dev on">
-            <img src="public/skill_icon/spring.svg" alt="SpringBoot" />
+          <li class="item on" data-category="dev">
+            <img src="assets/images/skill_icon/spring.svg" alt="SpringBoot" />
           </li>
-          <li class="item design">
-            <img src="public/skill_icon/figma.svg" alt="Figma" />
+          <li class="item on" data-category="design">
+            <img src="assets/images/skill_icon/figma.svg" alt="Figma" />
           </li>
-          <li class="item design">
-            <img src="public/skill_icon/photoshop.svg" alt="Photoshop" />
+          <li class="item on" data-category="design">
+            <img src="assets/images/skill_icon/photoshop.svg" alt="Photoshop" />
           </li>
-          <li class="item design">
-            <img src="public/skill_icon/ai.svg" alt="Illustrator" />
+          <li class="item on" data-category="design">
+            <img src="assets/images/skill_icon/ai.svg" alt="Illustrator" />
           </li>
-          <li class="item design">
-            <img src="public/skill_icon/pr.svg" alt="Primere" />
+          <li class="item on" data-category="design">
+            <img src="assets/images/skill_icon/pr.svg" alt="Primere" />
           </li>
-          <li class="item collab">
-            <img src="public/skill_icon/git.svg" alt="Git" />
+          <li class="item on" data-category="collab">
+            <img src="assets/images/skill_icon/git.svg" alt="Git" />
           </li>
-          <li class="item collab">
-            <img src="public/skill_icon/github.svg" alt="GitHub" />
+          <li class="item on" data-category="collab">
+            <img src="assets/images/skill_icon/github.svg" alt="GitHub" />
           </li>
-          <li class="item collab">
-            <img src="public/skill_icon/slack.svg" alt="Slack" />
+          <li class="item on" data-category="collab">
+            <img src="assets/images/skill_icon/slack.svg" alt="Slack" />
           </li>
-          <li class="item collab">
-            <img src="public/skill_icon/notion.svg" alt="Notion" />
+          <li class="item on" data-category="collab">
+            <img src="assets/images/skill_icon/notion.svg" alt="Notion" />
           </li>
         </ul>
         <!-- .skill_list end -->
@@ -202,7 +226,7 @@
     </section>
     <!-- .section03 end -->
 
-    <section class="section04 page_section">
+    <section id="section04" class="section04 page_section">
       <div class="inner">
         <div class="title_container">
           <h2 class="page_title">경력</h2>
@@ -212,7 +236,7 @@
           <!-- 회사1 -->
           <div class="career_container container">
             <figure class="company_logo">
-              <img src="public/icon_company.svg" alt="" />
+              <img src="assets/images/icon_company.svg" alt="" />
             </figure>
             <div class="career_col">
               <div class="company_meta">
@@ -228,6 +252,24 @@
                 </p>
               </div>
               <!-- .company_meta end -->
+              <p class="toggle_btn">
+                <svg
+                  width="10"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.70999 10.75L7.28999 5.74919L2.70999 0.75"
+                    stroke="#565656"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                주요 업무 내용 보기
+              </p>
               <ul class="career_projects">
                 <li class="career_item">
                   <div class="project_header">
@@ -236,53 +278,35 @@
                     </p>
                     <span class="project_period">2024.05 - 2024.09</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn on">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle on">
-                      <li>GPS 기반 실시간 물류조회 서비스 앱 제작</li>
-                      <li>웹 페이지, 앱 화면 기획 및 디자인, 퍼블리싱</li>
-                      <li>화주, 입직원, 운송자 대상 통합 물류 플랫폼</li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- GPS 기반 실시간 물류조회 서비스 앱 제작</li>
+                    <li>- 웹 페이지, 앱 화면 기획 및 디자인, 퍼블리싱</li>
+                    <li>- 화주, 입직원, 운송자 대상 통합 물류 플랫폼</li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">자사 홈페이지 제작</p>
                     <span class="project_period">2024.08 - 2024.9</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>자사 홈페이지 기획 및 디자인</li>
-                      <li>인터렉티브 반응형 웹 페이지 퍼블리싱</li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 자사 홈페이지 기획 및 디자인</li>
+                    <li>- 인터렉티브 반응형 웹 페이지 퍼블리싱</li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">자사 서비스 머니트리 웹 제작</p>
                     <span class="project_period">2024.06 - 2024.8</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        자사에서 서비스하는 통합 광고 관리 플랫폼 페이지 제작
-                      </li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 자사에서 서비스하는 통합 광고 관리 플랫폼 페이지 제작
+                    </li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
@@ -291,145 +315,97 @@
                     </p>
                     <span class="project_period">2024.05 - 2024.6</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        서울 성수동 위치 피부과 소수의원 홈페이지 리브랜딩
-                      </li>
-                      <li>메인페이지 / 시술 상세페이지 리디자인</li>
-                      <li>네이버 지도 API 추가로 네이버 플레이스 연동</li>
-                      <li>사용기술: React / Next / TypeScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 서울 성수동 위치 피부과 소수의원 홈페이지 리브랜딩
+                    </li>
+                    <li>- 메인페이지 / 시술 상세페이지 리디자인</li>
+                    <li>- 네이버 지도 API 추가로 네이버 플레이스 연동</li>
+                    <li>- 사용기술: React / Next / TypeScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">나비에이전시 홈페이지 제작</p>
                     <span class="project_period">2024.01 - 2024.1</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>자사 플랫폼 홈페이지 기획 및 디자인</li>
-                      <li>인터렉티브 반응형 웹 페이지 퍼블리싱</li>
-                      <li>사용기술: HTML / CSS / JavaScript</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 자사 플랫폼 홈페이지 기획 및 디자인</li>
+                    <li>- 인터렉티브 반응형 웹 페이지 퍼블리싱</li>
+                    <li>- 사용기술: HTML / CSS / JavaScript</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">자사 주얼리 브랜드 노바 브랜딩</p>
                     <span class="project_period">2024.10 - 2024.12</span>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>주얼리 브랜드 노바 로고 제작 및 아이덴티티 구축</li>
-                      <li>주얼리 상품 셀렉트 및 관리</li>
-                      <li>자사몰 기획 및 카페24 결제 시스템 세팅</li>
-                      <li>상품 및 모델 촬영 및 보정</li>
-                      <li>패키지 기획 및 디자인, 제작 관리</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 주얼리 브랜드 노바 로고 제작 및 아이덴티티 구축</li>
+                    <li>- 주얼리 상품 셀렉트 및 관리</li>
+                    <li>- 자사몰 기획 및 카페24 결제 시스템 세팅</li>
+                    <li>- 상품 및 모델 촬영 및 보정</li>
+                    <li>- 패키지 기획 및 디자인, 제작 관리</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">브랜딩 및 인쇄물 제작</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>기업 로고 리브랜딩</li>
-                      <li>자사 상품 브로슈어 제작</li>
-                      <li>임직원 명함 디자인 및 제작 관리</li>
-                      <li>패키지 디자인 및 인쇄 퀄리티 관리</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 기업 로고 리브랜딩</li>
+                    <li>- 자사 상품 브로슈어 제작</li>
+                    <li>- 임직원 명함 디자인 및 제작 관리</li>
+                    <li>- 패키지 디자인 및 인쇄 퀄리티 관리</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">실무 문서 디자인</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        대외용 회사소개서 및 영업 제안서 다수 기획 및 디자인
-                      </li>
-                      <li>영업 실무 목적의 맞춤형 제안서 PPT 디자인 및 구성</li>
-                      <li>
-                        브랜드 성격에 맞춘 비주얼/카피 톤으로 회사 소개서 및
-                        제안서 제작
-                      </li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 대외용 회사소개서 및 영업 제안서 다수 기획 및 디자인
+                    </li>
+                    <li>- 영업 실무 목적의 맞춤형 제안서 PPT 디자인 및 구성</li>
+                    <li>
+                      - 브랜드 성격에 맞춘 비주얼/카피 톤으로 회사 소개서 및
+                      제안서 제작
+                    </li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">상세페이지 디자인</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        브랜드 이미지에 맞춘 상세페이지 디자인 및 썸네일 제작
-                      </li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 브랜드 이미지에 맞춘 상세페이지 디자인 및 썸네일 제작
+                    </li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">숏폼 제작</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>지역 소상공인 대상 숏폼 제작</li>
-                      <li>현장 조사 및 영상 기획</li>
-                      <li>현장 촬영 및 상품 연출</li>
-                      <li>Adobe 툴을 활용한 영상 편집 및 TTS 활용 더빙 작업</li>
-                      <li>SNS 숏폼 업로드 및 계정 관리</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 지역 소상공인 대상 숏폼 제작</li>
+                    <li>- 현장 조사 및 영상 기획</li>
+                    <li>- 현장 촬영 및 상품 연출</li>
+                    <li>- Adobe 툴을 활용한 영상 편집 및 TTS 활용 더빙 작업</li>
+                    <li>- SNS 숏폼 업로드 및 계정 관리</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">블로그 관리</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>자사 블로그 관리 및 컨텐츠 제작</li>
-                      <li>세종TSI 세무사무소 블로그 기획</li>
-                      <li>세종TSI 블로그 스킨 디자인</li>
-                      <li>세종TSI 블로그 컨텐츠 디자인 및 제작</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 자사 블로그 관리 및 컨텐츠 제작</li>
+                    <li>- 세종TSI 세무사무소 블로그 기획</li>
+                    <li>- 세종TSI 블로그 스킨 디자인</li>
+                    <li>- 세종TSI 블로그 컨텐츠 디자인 및 제작</li>
+                  </ul>
                 </li>
               </ul>
               <!-- .career_projects end -->
@@ -438,7 +414,7 @@
           <!-- 회사2 -->
           <div class="career_container container">
             <figure class="company_logo">
-              <img src="public/icon_company.svg" alt="" />
+              <img src="assets/images/icon_company.svg" alt="" />
             </figure>
             <div class="career_col">
               <div class="company_meta">
@@ -454,59 +430,59 @@
                 </p>
               </div>
               <!-- .company_meta end -->
+              <p class="toggle_btn">
+                <svg
+                  width="10"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.70999 10.75L7.28999 5.74919L2.70999 0.75"
+                    stroke="#565656"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                주요 업무 내용 보기
+              </p>
               <ul class="career_projects">
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">광고 컨텐츠 디자인</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>브랜드 블로그 기획 및 컨텐츠 이미지 디자인</li>
-                      <li>브랜드 인스타그램 컨텐츠 이미지 디자인</li>
-                      <li>병/의원 원내 브로슈어 디자인</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 브랜드 블로그 기획 및 컨텐츠 이미지 디자인</li>
+                    <li>- 브랜드 인스타그램 컨텐츠 이미지 디자인</li>
+                    <li>- 병/의원 원내 브로슈어 디자인</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">광고 컨텐츠 제작 및 발행</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>광고 키워드 도출 및 키워드 관련 브랜딩</li>
-                      <li>블로그 컨텐츠 및 인스타그램 컨텐츠 발행</li>
-                      <li>포털 기사 컨텐츠 제작 및 발행</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>- 광고 키워드 도출 및 키워드 관련 브랜딩</li>
+                    <li>- 블로그 컨텐츠 및 인스타그램 컨텐츠 발행</li>
+                    <li>- 포털 기사 컨텐츠 제작 및 발행</li>
+                  </ul>
                 </li>
                 <li class="career_item">
                   <div class="project_header">
                     <p class="project_title">광고 성과 분석</p>
                   </div>
-                  <div class="project_contents">
-                    <p class="toggle_btn">
-                      <img src="public/icon-arrow-blue.svg" alt="" />
-                      주요 업무 내용 보기
-                    </p>
-                    <ul class="project_toggle">
-                      <li>
-                        플랫폼 별 유입 / 조회 / 전환 지표 수집 및 비교 분석
-                      </li>
-                      <li>
-                        키워드 별 유입률, 콘텐츠 반응률 등 광고 효과 정기
-                        모니터링
-                      </li>
-                      <li>분석 결과 기반 콘텐츠 개선 방향 도출 및 적용</li>
-                    </ul>
-                  </div>
+                  <ul class="project_contents">
+                    <li>
+                      - 플랫폼 별 유입 / 조회 / 전환 지표 수집 및 비교 분석
+                    </li>
+                    <li>
+                      - 키워드 별 유입률, 콘텐츠 반응률 등 광고 효과 정기
+                      모니터링
+                    </li>
+                    <li>- 분석 결과 기반 콘텐츠 개선 방향 도출 및 적용</li>
+                  </ul>
                 </li>
               </ul>
               <!-- .career_projects end -->
@@ -518,7 +494,7 @@
     </section>
     <!-- .section04 end -->
 
-    <section class="section05 page_section">
+    <section id="section05" class="section05 page_section">
       <div class="inner">
         <div class="title_container">
           <p class="page_description">프로젝트 상세보기</p>
@@ -526,146 +502,189 @@
         </div>
         <ul class="project_container container">
           <li class="project_card card">
-            <div class="card_contents">
-              <div class="card_top">
-                <figure>
-                  <img src="public/project_icon/sosu.svg" alt="소수의원" />
-                </figure>
-                <span class="service active">Live</span>
+            <a
+              href="https://bevel-balmoral-242.notion.site/2c2adb511d7980159882dbe1b548e2d9?source=copy_link"
+              target="_blank"
+            >
+              <div class="card_contents">
+                <div class="card_top">
+                  <figure>
+                    <img
+                      src="assets/images/project_icon/sosu.svg"
+                      alt="소수의원"
+                    />
+                  </figure>
+                  <span class="service active">Live</span>
+                </div>
+                <div class="card_middle">
+                  <h3 class="card_title">소수의원 홈페이지 리브랜딩</h3>
+                  <p class="card_description">
+                    성수동 위치 피부과 소수의원의 홈페이지 리브랜딩.
+                    메인페이지와 시술 상세페이지 리디자인, 네이버 지도 API
+                    추가로 네이버 플레이스 연동
+                  </p>
+                </div>
               </div>
-              <div class="card_middle">
-                <h3 class="card_title">소수의원 홈페이지 리브랜딩</h3>
-                <p class="card_description">
-                  성수동 위치 피부과 소수의원의 홈페이지 리브랜딩. 메인페이지와
-                  시술 상세페이지 리디자인, 네이버 지도 API 추가로 네이버
-                  플레이스 연동
-                </p>
-              </div>
-            </div>
-            <ul class="logo_list">
-              <li>
-                <figure>
-                  <img src="public/skill_icon/react.svg" alt="React" />
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="public/skill_icon/nextjs.svg" alt="NextJa" />
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="public/skill_icon/ts.svg" alt="TypeScript" />
-                </figure>
-              </li>
-            </ul>
+              <ul class="logo_list">
+                <li>
+                  <figure>
+                    <img src="assets/images/skill_icon/react.svg" alt="React" />
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="assets/images/skill_icon/nextjs.svg"
+                      alt="NextJa"
+                    />
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="assets/images/skill_icon/ts.svg"
+                      alt="TypeScript"
+                    />
+                  </figure>
+                </li>
+              </ul>
+            </a>
           </li>
           <li class="project_card card">
-            <div class="card_contents">
-              <div class="card_top">
-                <figure>
-                  <img src="public/project_icon/haewoo.png" alt="해우GLS" />
-                </figure>
-                <span class="service active">Live</span>
+            <a
+              href="https://bevel-balmoral-242.notion.site/GLS-2c2adb511d798038b738fd1a6d4c7308?source=copy_link"
+              target="_blank"
+            >
+              <div class="card_contents">
+                <div class="card_top">
+                  <figure>
+                    <img
+                      src="assets/images/project_icon/haewoo.png"
+                      alt="해우GLS"
+                    />
+                  </figure>
+                  <span class="service active">Live</span>
+                </div>
+                <div class="card_middle">
+                  <h3 class="card_title">
+                    GPS 기반 실시간 물류 조회 서비스 해우GLS 하이브리드 앱
+                    프론트 개발
+                  </h3>
+                  <p class="card_description">
+                    GPS를 기반으로 화주와 포워드사가 물류 이동 상태와 경로, 예상
+                    시간을 확인할 수 있는 서비스를 제공. JavaScript 및 HTML,
+                    CSS로 제작되어 웹앱 형태로 크로스 브라우징 구현.
+                  </p>
+                </div>
               </div>
-              <div class="card_middle">
-                <h3 class="card_title">
-                  GPS 기반 실시간 물류 조회 서비스 해우GLS 하이브리드 앱 프론트
-                  개발
-                </h3>
-                <p class="card_description">
-                  GPS를 기반으로 화주와 포워드사가 물류 이동 상태와 경로, 예상
-                  시간을 확인할 수 있는 서비스를 제공. JavaScript 및 HTML, CSS로
-                  제작되어 웹앱 형태로 크로스 브라우징 구현.
-                </p>
-              </div>
-            </div>
-            <ul class="logo_list">
-              <li>
-                <figure>
-                  <img src="public/skill_icon/html.svg" alt="HTML" />
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="public/skill_icon/css.svg" alt="CSS" />
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="public/skill_icon/js.svg" alt="JavaScript" />
-                </figure>
-              </li>
-            </ul>
+              <ul class="logo_list">
+                <li>
+                  <figure>
+                    <img src="assets/images/skill_icon/html.svg" alt="HTML" />
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="assets/images/skill_icon/css.svg" alt="CSS" />
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="assets/images/skill_icon/js.svg"
+                      alt="JavaScript"
+                    />
+                  </figure>
+                </li>
+              </ul>
+            </a>
           </li>
           <li class="project_card card">
-            <div class="card_contents">
-              <div class="card_top">
-                <figure>
-                  <img src="public/project_icon/ball.svg" alt="볼까예" />
-                </figure>
-                <span class="service">Demo</span>
+            <a
+              href="https://bevel-balmoral-242.notion.site/App-2c2adb511d7980bcba13f7c572fe9cf5?source=copy_link"
+              target="_blank"
+            >
+              <div class="card_contents">
+                <div class="card_top">
+                  <figure>
+                    <img
+                      src="assets/images/project_icon/ball.svg"
+                      alt="볼까예"
+                    />
+                  </figure>
+                  <span class="service">Demo</span>
+                </div>
+                <div class="card_middle">
+                  <h3 class="card_title">
+                    야구 예측 커뮤니티 앱 UX/UI 설계 및 프론트 개발
+                  </h3>
+                  <p class="card_description">
+                    Flutter로 개발한 야구 커뮤니티 앱. 경기 예측, 직관 동행,
+                    커뮤니티 등 다양한 기능을 통합하여 팬들이 함께 즐길 수 있는
+                    서비스를 제공하는 모바일 플랫폼.
+                  </p>
+                </div>
               </div>
-              <div class="card_middle">
-                <h3 class="card_title">
-                  야구 예측 커뮤니티 앱 UX/UI 설계 및 프론트 개발
-                </h3>
-                <p class="card_description">
-                  Flutter로 개발한 야구 커뮤니티 앱. 경기 예측, 직관 동행,
-                  커뮤니티 등 다양한 기능을 통합하여 팬들이 함께 즐길 수 있는
-                  서비스를 제공하는 모바일 플랫폼.
-                </p>
-                <!-- ✅ TODO : 깃허브 주소 연결 -->
-                <a href="/" target="_blank">GitHub 바로가기</a>
-              </div>
-            </div>
-            <ul class="logo_list">
-              <li>
-                <figure>
-                  <img src="public/skill_icon/dart.svg" alt="Dart" />
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="public/skill_icon/flutter.svg" alt="Flutter" />
-                </figure>
-              </li>
-            </ul>
+              <ul class="logo_list">
+                <li>
+                  <figure>
+                    <img src="assets/images/skill_icon/dart.svg" alt="Dart" />
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="assets/images/skill_icon/flutter.svg"
+                      alt="Flutter"
+                    />
+                  </figure>
+                </li>
+              </ul>
+            </a>
           </li>
           <li class="project_card card">
-            <div class="card_contents">
-              <div class="card_top">
-                <figure>
-                  <img src="public/project_icon/jjava.svg" alt="짜바" />
-                </figure>
-                <span class="service">Demo</span>
+            <a
+              href="https://bevel-balmoral-242.notion.site/JAVA-2c2adb511d7980a48d7fd3098fb1e57f?source=copy_link"
+              target="_blank"
+            >
+              <div class="card_contents">
+                <div class="card_top">
+                  <figure>
+                    <img
+                      src="assets/images/project_icon/jjava.svg"
+                      alt="짜바"
+                    />
+                  </figure>
+                  <span class="service">Demo</span>
+                </div>
+                <div class="card_middle">
+                  <h3 class="card_title">
+                    JAVA 언어 학습용 블록코딩 앱 프론트 개발
+                  </h3>
+                  <p class="card_description">
+                    Flutter로 개발한 블록 코딩 앱. Google에서 제공하는 블록코딩
+                    오픈소스인 Blockly를 활용한 커스텀 블록코딩 서비스
+                    제공.고난이도의 블록코딩을 통한 사용자의 코딩 능력 향상과
+                    모바일/태블릿 기기를 통한 접근성 높은 서비스 제공.
+                  </p>
+                </div>
               </div>
-              <div class="card_middle">
-                <h3 class="card_title">
-                  JAVA 언어 학습용 블록코딩 앱 프론트 개발
-                </h3>
-                <p class="card_description">
-                  Flutter로 개발한 블록 코딩 앱. Google에서 제공하는 블록코딩
-                  오픈소스인 Blockly를 활용한 커스텀 블록코딩 서비스
-                  제공.고난이도의 블록코딩을 통한 사용자의 코딩 능력 향상과
-                  모바일/태블릿 기기를 통한 접근성 높은 서비스 제공.
-                </p>
-                <!-- ✅ TODO : 깃허브 주소 연결 -->
-                <a href="/" target="_blank">GitHub 바로가기</a>
-              </div>
-            </div>
-            <ul class="logo_list">
-              <li>
-                <figure>
-                  <img src="public/skill_icon/dart.svg" alt="Dart" />
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img src="public/skill_icon/flutter.svg" alt="Flutter" />
-                </figure>
-              </li>
-            </ul>
+              <ul class="logo_list">
+                <li>
+                  <figure>
+                    <img src="assets/images/skill_icon/dart.svg" alt="Dart" />
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="assets/images/skill_icon/flutter.svg"
+                      alt="Flutter"
+                    />
+                  </figure>
+                </li>
+              </ul>
+            </a>
           </li>
         </ul>
       </div>
@@ -673,98 +692,216 @@
     </section>
     <!-- .section05 end -->
 
-    <section class="section06 page_section">
+    <section id="section07" class="section07 page_section">
       <div class="inner">
-        <h2 class="page_title">블로그</h2>
-        <ul class="blog_container container">
-          <!-- ✅ TODO : 블로그 최신 글 연동 및 더보기 버튼 블로그 링크 연결 -->
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img src="public/icon-arrow-white.svg" alt="" />
-                </p>
+        <div class="title_container">
+          <h2 class="page_title">Design Book</h2>
+        </div>
+        <ul class="book_container container">
+          <li class="card book_card">
+            <a
+              href="https://www.figma.com/design/fikJI5E044UQ7RICMSa8hJ/%EC%8A%A4%ED%83%80%EC%9D%BC-%EA%B0%80%EC%9D%B4%EB%93%9C-%EA%B3%B5%ED%86%B5-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8?node-id=3-27&t=rSbuxMWoyZDZIHvG-1"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/1.png"
+                  alt="Haewooglobalcargomap 앱 UX/UI 이미지"
+                />
+              </figure>
+              <div class="content">
+                <p>PC/Mobile</p>
+                <h3>Haewooglobalcargomap 앱 UX/UI</h3>
+                <span>May, 2024</span>
               </div>
-            </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+              </ul>
+            </a>
           </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img src="public/icon-arrow-white.svg" alt="" />
-                </p>
+          <li class="card book_card">
+            <a
+              href="https://www.figma.com/design/aJ0vgmgzmf9Cpxt3AYDGyo/%EC%86%8C%EC%88%98%EC%9D%98%EC%9B%90-%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80_%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8_%EC%9B%90%EC%9E%A5%EB%8B%98%EC%A0%84%EB%8B%AC?node-id=0-1&t=1YazQ0z9eqjoviLQ-1"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/2.png"
+                  alt="소수의원 홈페이지 리뉴얼 디자인"
+                />
+              </figure>
+              <div class="content">
+                <p>PC/Mobile</p>
+                <h3>소수의원 홈페이지 리뉴얼</h3>
+                <span>May, 2024</span>
               </div>
-            </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+              </ul>
+            </a>
           </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img src="public/icon-arrow-white.svg" alt="" />
-                </p>
+          <li class="card book_card">
+            <a
+              href="https://www.figma.com/design/WWNOgb2eISuwkC3AlcwN0J/%EC%97%90%EC%9D%B4%EC%B9%98%EC%95%A4%EC%97%98%ED%99%80%EB%94%A9%EC%8A%A4-%EB%A6%AC%EB%89%B4%EC%96%BC?node-id=9-3&t=xVzAikm9RY3A1Bm0-1"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/3.png"
+                  alt="에이치앤엘홀딩스 홈페이지 UXUI 디자인"
+                />
+              </figure>
+              <div class="content">
+                <p>PC/Mobile</p>
+                <h3>에이치앤엘홀딩스 홈페이지</h3>
+                <span>August, 2024</span>
               </div>
-            </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+                <li class="label">Photoshop</li>
+                <li class="label">Illustrator</li>
+              </ul>
+            </a>
           </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img src="public/icon-arrow-white.svg" alt="" />
-                </p>
+          <li class="card book_card">
+            <a
+              href="https://www.figma.com/design/IGpzV4pATMX1ljSPHeOweB/%EB%B3%BC%EA%B9%8C%EC%98%88_%EB%94%94%EC%9E%90%EC%9D%B8%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=92-2955&t=0JkoQ9AdfL968pIE-1"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/4.png"
+                  alt="볼까예 앱 UX/UI 디자인인"
+                />
+              </figure>
+              <div class="content">
+                <p>Mobile</p>
+                <h3>볼까예 앱 UX/UI</h3>
+                <span>June, 2025</span>
               </div>
-            </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+              </ul>
+            </a>
           </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img src="public/icon-arrow-white.svg" alt="" />
-                </p>
+          <li class="card book_card">
+            <a
+              href="https://www.figma.com/design/HJfga6yAT7AVCE86z73tpb/%EB%B8%94%EB%A1%9D%EC%BD%94%EB%94%A9%EC%95%B1?node-id=3003-6689&t=XhA4vSajJGWmiPB4-1"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/5.png"
+                  alt="짜바 앱 UX/UI 디자인"
+                />
+              </figure>
+              <div class="content">
+                <p>Mobile</p>
+                <h3>짜바 앱 UX/UI</h3>
+                <span>July, 2025</span>
               </div>
-            </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+              </ul>
+            </a>
           </li>
-          <li class="blog_card card">
-            <div class="blog_contents">
-              <span>작성일</span>
-              <div>
-                <h4 class="card_title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h4>
-                <p>
-                  자세히보기<img src="public/icon-arrow-white.svg" alt="" />
-                </p>
+          <li class="card book_card">
+            <a
+              href="https://www.figma.com/design/aO1LSjVDLoV7hYm4GyJqkN/2025.08.18-%EA%B6%8C%EB%82%98%EC%98%81?node-id=0-1&t=EgaCDAWPi0s6b1zA-1"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/6.png"
+                  alt="모바일 청첩장 UX/UI 디자인"
+                />
+              </figure>
+              <div class="content">
+                <p>Mobile</p>
+                <h3>모바일 청첩장 UX/UI</h3>
+                <span>October, 2025</span>
               </div>
-            </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+              </ul>
+            </a>
+          </li>
+          <li class="card book_card">
+            <a
+              href="https://github.com/clubnerdy/flutter_design"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/7.png"
+                  alt="Flutter 앱 모작"
+                />
+              </figure>
+              <div class="content">
+                <p>Mobile</p>
+                <h3>Flutter 앱 모작</h3>
+                <span>2025/2026</span>
+              </div>
+            </a>
+          </li>
+          <li class="card book_card non-event">
+            <a href="" target="_blank">
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/12.png"
+                  alt="상세페이지 및 썸네일"
+                />
+              </figure>
+              <div class="content">
+                <h3>상세페이지 및 썸네일</h3>
+                <span>2024</span>
+              </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+                <li class="label">Photoshop</li>
+                <li class="label">Illustrator</li>
+              </ul>
+            </a>
+          </li>
+          <li class="card book_card non-event">
+            <a href="" target="_blank">
+              <figure>
+                <img
+                  src="assets/images/design/thumnail/13.png"
+                  alt="문서 디자인"
+                />
+              </figure>
+              <div class="content">
+                <h3>문서 디자인</h3>
+                <span>2024</span>
+              </div>
+              <ul class="label_list">
+                <li class="label">Figma</li>
+                <li class="label">Photoshop</li>
+                <li class="label">Illustrator</li>
+              </ul>
+            </a>
+          </li>
+          <li class="card book_card non-event">
+            <a href="" target="_blank">
+              <figure><img src="assets/images/dummy.png" alt="" /></figure>
+              <div class="content">
+                <h3>병의원 컨텐츠 디자인</h3>
+                <span>2020 - 2022</span>
+              </div>
+              <ul class="label_list">
+                <li class="label">Photoshop</li>
+                <li class="label">Illustrator</li>
+              </ul>
+            </a>
           </li>
         </ul>
-        <!-- .blog_container end -->
-        <button class="more_btn">더보기</button>
       </div>
       <!-- .inner end -->
     </section>
-    <!-- .section06 end -->
+    <!-- .section07 end -->
 
-    <section class="section07 page_section">
+    <section id="section08" class="section08 page_section">
       <div class="inner">
         <ul class="edu_list">
           <li class="content">
@@ -854,9 +991,9 @@
       </div>
       <!-- .inner end -->
     </section>
-    <!-- .section07 end -->
+    <!-- .section08 end -->
 
-    <footer class="section08 page_section">
+    <footer id="section09" class="section09 page_section">
       <div class="inner">
         <h2 class="page_title">
           감사합니다<br />
@@ -870,16 +1007,24 @@
           </div>
           <a
             href="http://github.com/clubnerdy"
-            class="email_copy"
+            class="github_link"
             target="_blank"
           >
             <h3>GitHub</h3>
             <p>github.com/clubnerdy</p>
           </a>
+          <a
+            href="https://clubnerdy.inblog.io"
+            class="blog_link"
+            target="_blank"
+          >
+            <h3>Blog</h3>
+            <p>clubnerdy.inblog.io</p>
+          </a>
         </div>
       </div>
       <!-- .inner end -->
     </footer>
-    <!-- .section08 end -->
+    <!-- .section09 end -->
   </body>
 </html>

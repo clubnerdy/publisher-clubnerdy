@@ -4,7 +4,7 @@
 /* .section01 */
 
 .section01.page_section {
-  height: 100vh;
+  height: calc(100vh - 152px);
   padding: 0;
   display: flex;
   align-items: center;
@@ -12,6 +12,7 @@
 
 .section01 .inner {
   gap: 52px;
+  transform: translateY(3vh);
 }
 
 .section01 .content {
@@ -42,20 +43,25 @@
   line-height: 1.5;
 }
 
-.controller_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 82px;
-}
-
 .download_btn {
   border: 0;
   background-color: var(--fill-normal);
-  padding: 12px 34px;
   border-radius: 8px;
   margin: 0 auto;
+  transition: 0.3s;
+}
+
+.download_btn:hover {
+  background-color: var(--primary-normal);
+}
+
+.download_btn svg path {
+  stroke: var(--label-neutral);
+  transition: 0.3s;
+}
+
+.download_btn:hover svg path {
+  stroke: var(--label-white);
 }
 
 .download_btn a {
@@ -64,30 +70,56 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--label-neutral);
+  transition: 0.3s;
+  padding: 12px 34px;
+}
+
+.download_btn:hover a {
+  color: var(--label-white);
+}
+
+.nav_wrap {
+  width: 100%;
+  position: sticky;
+  top: 30px;
+  z-index: 999999999;
 }
 
 .main_nav {
   background-color: var(--fill-normal);
   border-radius: 78px;
-  padding: 12px 30px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--shadow-normal);
 }
 
 .main_nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 22px;
 }
 
 .main_nav li {
+  height: 100%;
   font-size: 14px;
-  font-weight: 400;
-  color: var(--label-neutral);
+  font-weight: 500;
+  color: var(--label-alternative);
   cursor: pointer;
+  padding: 12px 22px;
+  border-radius: 999px;
+}
+
+.main_nav li.is-active {
+  background-color: var(--fill-white);
+  color: var(--primary-normal);
+}
+
+.main_nav li:hover {
+  color: var(--primary-normal);
 }
 
 /* .section02 */
@@ -99,22 +131,28 @@
 }
 
 .ability_list .item {
-  width: 100%;
-}
-
-.item a {
+  max-width: 296px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 26px;
 }
 
-/* ✅ TODO: 이미지 넣고나면 높이값 삭제 */
 .item figure {
   width: 100%;
   height: 216px;
   border-radius: 16px;
   background-color: var(--fill-normal);
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ability_list .item:nth-child(2) img {
+  max-width: none;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .item div {
@@ -124,14 +162,14 @@
 }
 
 .item h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
 }
 
 .item p {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--label-neutral);
 }
 
@@ -141,25 +179,38 @@
   border-radius: 78px;
   background-color: var(--fill-normal);
   box-shadow: var(--shadow-normal);
+  position: relative;
 }
 
 .skill_nav ul {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.nav_item {
+.skill_item {
   padding: 12px 20px;
   border-radius: 78px;
   color: var(--label-alternative);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
-.nav_item.on {
-  background-color: var(--fill-white);
+.skill_item.on {
   color: var(--primary-normal);
+}
+
+.nav_indicator {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: var(--background-white);
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
 }
 
 .skill_list {
@@ -175,6 +226,7 @@
   box-shadow: var(--shadow-normal);
   overflow: hidden;
   opacity: 0.1;
+  transition: 0.3s;
 }
 
 .skill_list .item.on {
@@ -242,6 +294,9 @@
   display: flex;
   flex-direction: column;
   gap: 44px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
 
 .career_item {
@@ -259,6 +314,7 @@
 .project_title {
   font-size: 16px;
   font-weight: 500;
+  color: var(--primary-normal);
 }
 
 .project_period {
@@ -270,14 +326,13 @@
 .project_contents {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
-.project_toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-left: 12px;
+.project_contents li {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--label-neutral);
 }
 
 .toggle_btn {
@@ -285,26 +340,17 @@
   gap: 6px;
   align-items: center;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--primary-normal);
-}
-
-.toggle_btn.on img {
-  transform: rotateZ(90deg);
-}
-
-.project_toggle li {
-  /* ✅ TODO : 클릭이벤트 할 때 주석풀기 */
-  /* height: 0; */
-  /* overflow: hidden; */
-  list-style: inside;
-  font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--label-neutral);
+  cursor: pointer;
 }
 
-.project_toggle.on li {
-  height: auto;
+.toggle_btn svg {
+  transition: 0.3s;
+}
+
+.toggle_btn.on svg {
+  transform: rotateZ(90deg);
 }
 
 /* .section05 */
@@ -330,10 +376,14 @@
   border: 1px solid var(--line-normal);
   border-radius: 16px;
   overflow: hidden;
+  padding: 16px;
+}
+
+.project_card a {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px;
 }
 
 .card_contents {
@@ -412,7 +462,7 @@
   min-height: 216px;
   padding: 16px;
   border-radius: 16px;
-  background-image: url(../public/dummy-01.png);
+  background-image: url(../assets/images/dummy-01.png);
   overflow: hidden;
   position: relative;
 }
@@ -471,6 +521,70 @@
 }
 
 /* .section07 */
+
+.book_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.book_card.non-event {
+  pointer-events: none;
+}
+
+.book_card a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.book_card figure {
+  max-height: 216px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.book_card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.book_card p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--label-neutral);
+}
+
+.book_card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.book_card span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-normal);
+}
+
+.label_list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.label {
+  background-color: #000;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--label-white);
+}
+
+/* .section08 */
 
 .edu_list {
   width: 458px;
@@ -544,7 +658,7 @@
   background-color: var(--line-normal);
 }
 
-/* footer .section08 */
+/* footer .section09 */
 
 footer {
   height: 100vh;

@@ -15,6 +15,7 @@
   /* Background */
   --background-normal: #fafafa;
   --background-white: #ffffff;
+  --background-modal: rgba(0, 0, 0, 0.4);
 
   /* Line */
   --line-normal: #d7d7d7;
@@ -27,6 +28,10 @@
 
   /* Shadow */
   --shadow-normal: 0px 4px 12px #5353531a;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,9 +72,6 @@ body {
 
 /* 반응형 */
 @media (max-width: 640px) {
-  :root {
-  }
-
   .inner {
     max-width: 80%;
     min-width: calc(100% - 32px);
