@@ -462,7 +462,7 @@
   min-height: 216px;
   padding: 16px;
   border-radius: 16px;
-  background-image: url(../assets/images/dummy-01.png);
+  background-image: url("./../assets/images/dummy-01.png");
   overflow: hidden;
   position: relative;
 }
